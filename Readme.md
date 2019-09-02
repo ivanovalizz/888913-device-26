@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Elizaveta Ivanova](https://up.htmlacademy.ru/htmlcss/26/user/888913).
-* Наставник: `Неизвестно`.
+* Наставник: [Ирина Шашева](https://up.htmlacademy.ru/htmlcss/26/user/130615).
 
 ---
 
