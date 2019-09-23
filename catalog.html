@@ -7,8 +7,10 @@
 <body>
 <header>
     <a href="index.html"><img src="img/logo-device.svg" alt="Логотип Device" width="164" height="35"></a> <!-- Logotype -->
-    <input type="search" placeholder="Поиск по сайту">
-    <button type="submit">Поиск</button>
+    <form> <!-- Action & Method ?? -->
+        <input type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+        <button type="submit">Поиск</button>
+    </form>
     <a href="#"><span>Иконка пользователя</span>
         Валентин Петухов</a>
     <button type="button">Выйти</button>
@@ -42,6 +44,43 @@
     <section>
         <h2>Фильтр</h2>
         <!-- Форма для фильтра -->
+        <form action="" method="post">
+            <fieldset>
+                <legend>Цвет</legend>
+                <label for="filter-color-black">
+                    <input type="checkbox" name="color-black" id="filter-color-black" checked>
+                    Чёрный
+                </label>
+                <label for="filter-color-white">
+                    <input type="checkbox" name="color-white" id="filter-color-white">
+                    Белый
+                </label>
+                <label for="filter-color-blue">
+                    <input type="checkbox" name="color-blue" id="filter-color-blue" checked>
+                    Синий
+                </label>
+                <label for="filter-color-red">
+                    <input type="checkbox" name="color-red" id="filter-color-red" checked>
+                    Красный
+                </label>
+                <label for="filter-color-pink">
+                    <input type="checkbox" name="color-pink" id="filter-color-pink">
+                    Розовый
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Bluetooth</legend>
+                <label for="filter-bluetooth-on">
+                    <input type="radio" name="filter-bluetooth" id="filter-bluetooth-on" value="yes" checked>
+                    Есть
+                </label>
+                <label for="filter-bluetooth-off">
+                    <input type="radio" name="filter-bluetooth" id="filter-bluetooth-off" value="no">
+                    Нет
+                </label>
+            </fieldset>
+            <button type="submit">Показать</button>
+        </form>
     </section>
     <section>
         <h2>Сортировка:</h2>
@@ -111,9 +150,15 @@
     <a href="">Гарантия</a>
     <a href="">Контакты</a>
     <ul>
-        <li><a href="">Facebook</a></li>
-        <li><a href="">Instagram</a></li>
-        <li><a href="">Twitter</a></li>
+        <li>
+            <a href="#" aria-label="Ссылка на страницу Device в Фейсбук"></a>
+        </li>
+        <li>
+            <a href="#" aria-label="Ссылка на страницу Device в Инстаграм"></a>
+        </li>
+        <li>
+            <a href="#" aria-label="Ссылка на страницу Device в Твиттер"></a>
+        </li>
     </ul>
     <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html.svg" alt="HTML Academy"></a>
 </footer>

@@ -6,9 +6,13 @@
 </head>
 <body>
 <header>
-    <a><img src="img/logo-device.svg" alt="Логотип Device" width="164" height="35"></a> <!-- Logotype -->
-    <input type="search" placeholder="Поиск по сайту">
-    <button type="submit">Поиск</button>
+    <a>
+        <img src="img/logo-device.svg" alt="Логотип Device" width="164" height="35">
+    </a> <!-- Logotype -->
+    <form> <!-- Action & Method ?? -->
+        <input type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+        <button type="submit">Поиск</button>
+    </form>
     <a href="#"><span>Иконка пользователя</span>Войти</a> <!-- Форма авторизации -->
     <a href="#"><span>Иконка сравнения</span>Сравнить</a>
     <a href="#"><span>Иконка корзины</span>Корзина</a>
@@ -31,12 +35,12 @@
     </nav>
 </header>
 <main>
-    <h1>Device</h1>
+    <h1 class="visually-hidden">Device</h1>
     <section>
-        <h2>Популярные товары</h2>
+        <h2 class="visually-hidden">Популярные товары</h2>
         <ul>
             <li>
-                <h3>Палка для селфи</h3>
+                <h3 class="visually-hidden">Палка для селфи</h3>
                 <img src="img/slider-1.png" alt="Палка для селфи" width="384" height="486">
                 <p>Делай селфи, как Бен Стиллер!</p>
                 <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом
@@ -57,7 +61,7 @@
                 </table>
             </li>
             <li>
-                <h3>Фитнес-браслет</h3>
+                <h3 class="visually-hidden">Фитнес-браслет</h3>
                 <img src="img/slider-2.png" alt="Фитнес-браслет" width="345" height="485">
                 <p>Худеем правильно!</p>
                 <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
@@ -72,7 +76,7 @@
                 </table>
             </li>
             <li>
-                <h3>Квадрокоптер</h3>
+                <h3 class="visually-hidden">Квадрокоптер</h3>
                 <img src="img/slider-3.png" alt="Квадрокоптер" width="518" height="334">
                 <p>Порхает как бабочка, жалит как пчела!</p>
                 <p>Этот обычный, на первый взгляд, квадрокоптероснащен мощным лазером, замаскированным под стандартную
@@ -92,30 +96,30 @@
         </ul>
     </section>
     <section>
-        <h2>Каталог товаров</h2>
+        <h2 class="visually-hidden">Каталог товаров</h2>
         <ul>
             <li>
-                <a href=""><img src="#" alt="Виртуальная реальность">Виртуальная реальность</a>
+                <a href="#"><img src="#" alt="Виртуальная реальность">Виртуальная реальность</a>
             </li>
             <li>
                 <a href="catalog.html"><img src="#" alt="Моноподы для селфи">Моноподы для селфи</a>
             </li>
             <li>
-                <a href=""><img src="#" alt="Экшн-камеры">Экшн-камеры</a>
+                <a href="#"><img src="#" alt="Экшн-камеры">Экшн-камеры</a>
             </li>
             <li>
-                <a href=""><img src="#" alt="Фитнес-браслеты">Фитнес-браслеты</a>
+                <a href="#"><img src="#" alt="Фитнес-браслеты">Фитнес-браслеты</a>
             </li>
             <li>
-                <a href=""><img src="#" alt="Умные часы">Умные часы</a>
+                <a href="#"><img src="#" alt="Умные часы">Умные часы</a>
             </li>
             <li>
-                <a href=""><img src="#" alt="Квадрокоптеры">Квадрокоптеры</a>
+                <a href="#"><img src="#" alt="Квадрокоптеры">Квадрокоптеры</a>
             </li>
         </ul>
     </section>
     <section>
-        <h2>Преимущества</h2>
+        <h2 class="visually-hidden">Преимущества</h2>
         <ul>
             <li>
                 <button type="button">Доставка</button>
@@ -146,30 +150,30 @@
         </ul>
     </section>
     <section>
-        <h2>Бренды</h2>
+        <h2 class="visually-hidden">Бренды</h2>
         <ul>
             <li>
                 <a href="#">
-                    <img src="img/logo-1.png" alt="DJI" width="260" height="100">
-                    <img src="img/logo-1-color.png" alt="DJI" width="260" height="100"> <!-- Colored -->
+                    <img src="img/logo-1.png" alt="Товары бренда DJI" width="260" height="100">
+                    <img src="img/logo-1-color.png" alt="Товары бренда DJI" width="260" height="100"> <!-- Colored -->
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="img/logo-2.png" alt="SPGadgets" width="260" height="100">
-                    <img src="img/logo-2-color.png" alt="SPGadgets" width="260" height="100"> <!-- Colored -->
+                    <img src="img/logo-2.png" alt="Товары бренда SPGadgets" width="260" height="100">
+                    <img src="img/logo-2-color.png" alt="Товары бренда SPGadgets" width="260" height="100"> <!-- Colored -->
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="img/logo-3.png" alt="GoPro" width="260" height="100">
-                    <img src="img/logo-3-color.png" alt="GoPro" width="260" height="100"> <!-- Colored -->
+                    <img src="img/logo-3.png" alt="Товары бренда GoPro" width="260" height="100">
+                    <img src="img/logo-3-color.png" alt="Товары бренда GoPro" width="260" height="100"> <!-- Colored -->
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="img/logo-4.png" alt="Vive" width="260" height="100">
-                    <img src="img/logo-4-color.png" alt="Vive" width="260" height="100"> <!-- Colored -->
+                    <img src="img/logo-4.png" alt="Товары бренда Vive" width="260" height="100">
+                    <img src="img/logo-4-color.png" alt="Товары бренда Vive" width="260" height="100"> <!-- Colored -->
                 </a>
             </li>
         </ul>
@@ -190,12 +194,14 @@
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно Вы сможете проверить работоспособность покупки.
             Всякое бывает.</p>
-        <img src="img/map.jpg" alt="Адрес на карте" width="560" height="222">
+        <img src="img/map.jpg" alt="Адрес магазина на карте" width="560" height="222">
         <button>Напишите нам</button>
     </section>
 </main>
 <footer>
-    <a><img src="img/logo-device.svg" alt="Логотип Device" width="164" height="35"></a> <!-- Logotype -->
+    <a>
+        <img src="img/logo-device.svg" alt="Логотип Device" width="164" height="35">
+    </a> <!-- Logotype -->
     <p>г. Москва, ул. Строителей, 15</p>
     <p>Тел.: <a href="tel:+74954959595">+7(495)495-95-95</a></p>
     <ul>
@@ -209,14 +215,48 @@
         <li><a href="#">Контакты</a></li>
     </ul>
     <ul>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Twitter</a></li>
+        <li>
+            <a href="#" aria-label="Ссылка на страницу Device в Фейсбук"></a>
+        </li>
+        <li>
+            <a href="#" aria-label="Ссылка на страницу Device в Инстаграм"></a>
+        </li>
+        <li>
+            <a href="#" aria-label="Ссылка на страницу Device в Твиттер"></a>
+        </li>
     </ul>
     <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html.svg" alt="HTML Academy"></a>
 </footer>
 <section>
     <!-- Форма обратной связи -->
+    <h2 class="visually-hidden">
+        Форма обратной связи
+    </h2>
+    <form action="" method="post">
+        <p>
+            <label for="user-name">Ваше имя:</label>
+            <input type="text" name="name" id="user-name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+            <label for="user-email">Ваш e-mail:</label>
+            <input type="text" name="email" id="user-email" placeholder="email@example.com">
+        </p>
+        <p>
+            <label for="user-message">Текст письма:</label>
+            <input type="text" name="email" id="user-message" placeholder="В свободной форме">
+        </p>
+        <button type="submit">Отправить</button>
+    </form>
+    <button type="button">Закрыть</button>
+</section>
+<section>
+    <h2 class="visually-hidden">
+        Как до нас добраться
+    </h2>
+    <p>
+        <img src="img/map.jpg" alt="Офис компании по адресу ул. Строителей 15, Москва" width="960" height="559">
+    </p>
+    <button type="button">Закрыть</button>
 </section>
 </body>
 </html>
