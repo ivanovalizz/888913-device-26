@@ -9,11 +9,11 @@
     <a>
         <img src="img/logo-device.svg" alt="Логотип Device" width="164" height="35">
     </a> <!-- Logotype -->
-    <form> <!-- Action & Method ?? -->
+    <form action="https://echo.htmlacademy.ru" method="get">
         <input type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-        <button type="submit">Поиск</button>
+        <a href="#">Поиск</a>
     </form>
-    <a href="#"><span>Иконка пользователя</span>Войти</a> <!-- Форма авторизации -->
+    <a href="#"><span>Иконка пользователя</span>Войти</a>
     <a href="#"><span>Иконка сравнения</span>Сравнить</a>
     <a href="#"><span>Иконка корзины</span>Корзина</a>
     <nav>
@@ -44,8 +44,7 @@
                 <img src="img/slider-1.png" alt="Палка для селфи" width="384" height="486">
                 <p>Делай селфи, как Бен Стиллер!</p>
                 <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом
-                    всего 5
-                    килограмм.</p>
+                    всего 5 килограмм.</p>
                 <a href="#">Подробнее</a>
                 <table>
                     <tr>
@@ -195,7 +194,7 @@
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно Вы сможете проверить работоспособность покупки.
             Всякое бывает.</p>
         <img src="img/map.jpg" alt="Адрес магазина на карте" width="560" height="222">
-        <button>Напишите нам</button>
+        <a href="#">Напишите нам</a>
     </section>
 </main>
 <footer>
@@ -232,18 +231,18 @@
     <h2 class="visually-hidden">
         Форма обратной связи
     </h2>
-    <form action="" method="post">
+    <form action=https://echo.htmlacademy.ru" method="post">
         <p>
             <label for="user-name">Ваше имя:</label>
             <input type="text" name="name" id="user-name" placeholder="Имя Фамилия">
         </p>
         <p>
             <label for="user-email">Ваш e-mail:</label>
-            <input type="text" name="email" id="user-email" placeholder="email@example.com">
+            <input type="email" name="email" id="user-email" placeholder="email@example.com">
         </p>
         <p>
             <label for="user-message">Текст письма:</label>
-            <input type="text" name="email" id="user-message" placeholder="В свободной форме">
+            <textarea name="message" id="user-message" placeholder="В свободной форме" rows="10" cols="50"></textarea>
         </p>
         <button type="submit">Отправить</button>
     </form>
