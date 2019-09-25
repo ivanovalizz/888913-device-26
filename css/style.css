@@ -1,0 +1,277 @@
+@font-face {
+    font-family: Gilroy;
+    src: url(/fonts/gilroylight.woff2);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+    color: #464646;
+    background-color: #ffffff;
+}
+
+/*
+.extra-bold {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-weight: 800;
+}
+*/
+
+/**
+ * Сброс стилей у кнопки.
+*/
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    /* отображаем курсор в виде руки при наведении; некоторые
+      считают, что необходимо оставлять стрелочный вид для кнопок */
+    cursor: pointer;
+}
+
+.main-header {
+    background-color: rgba(240, 197, 46, 0.5);
+}
+
+.main-header a {
+    text-decoration: none;
+}
+
+.navigation-item,
+.dropdown-item {
+    list-style: none;
+}
+
+.navigation-item a {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.header-action {
+    color: #000000;
+}
+
+.main-header a:hover,
+.main-header a:focus {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.main-header a:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-item a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    line-height: 36px;
+    font-weight: 400;
+    letter-spacing: 0.15px;
+    text-transform: none;
+    color: #000000;
+}
+
+.index-columns h2 {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 47px;
+    line-height: 48px;
+    letter-spacing: 0.47px;
+    font-weight: 800;
+    color: #000000;
+}
+
+.index-columns p {
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 300;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.partners-list {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 800;
+    color: #000000;
+}
+
+.button {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
+    letter-spacing: 3.6px;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+}
+
+.button::after {
+    position: absolute;
+    content: '';
+    width: 260px;
+    height: 8px;
+    background-color: #f0c52e;
+    top: calc(50% - 4px); /* Error */
+    left: 0;
+    z-index: -1;
+}
+
+.button:hover::after,
+.button:focus::after,
+.button:active::after {
+    position: absolute;
+    content: '';
+    width: 260px;
+    height: 40px;
+    background-color: #f0c52e;
+    top: calc(50% - 20px); /* Error */
+    left: 0;
+    z-index: -1;
+}
+
+.button:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.main-footer {
+    background-color: #464646;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.footer-action {
+    /*font-family: inherit;*/
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 36px;
+    letter-spacing: 0.15px;
+}
+
+.footer-advantages a,
+.footer-action,
+.phone-number {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-advantages li,
+.social li,
+.footer-actions li,
+.breadcrumbs li,
+.catalog-list li {
+    list-style: none;
+}
+
+.footer-advantages {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
+    letter-spacing: 3.6px;
+    color: #ffffff;
+}
+
+.footer-advantages a:hover,
+.footer-advantages a:focus {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-advantages a:active,
+.footer-action:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-action:hover,
+.footer-action:focus {
+    color: #ffffff;
+}
+
+.main-title {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 47px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: 0.47px;
+    color: #000000;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.3);
+}
+/*
+.breadcrumbs a:not(:last-child):hover,
+.breadcrumbs a:not(:last-child):focus {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs a:not(:last-child):active {
+    color: rgba(0, 0, 0, 0.1);
+}
+*/
+/*----------------*/
+/* Настройка фильтров */
+/*----------------*/
+
+.filter {
+    font-size: 14px;
+    line-height: 40px;
+    letter-spacing: 0.14px;
+    color: #000000;
+}
+
+.filter legend {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
+    letter-spacing: 3.6px;
+    color: #000000;
+}
+
+.filter-color li,
+.filter-bluetooth li {
+    list-style: none;
+}
+
+.filter fieldset {
+    border: none;
+}
+
+.filter input:disabled + label {
+    color: #a6a6a6;
+}
+
+.catalog-item a {
+    text-decoration: none;
+}
+
+.item-name {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.18px;
+    font-weight: 800;
+}
+
+.item-name a {
+    color: #000000;
+}
