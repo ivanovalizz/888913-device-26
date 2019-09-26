@@ -15,7 +15,7 @@
     </form>
     <a class="header-action" href="#"><span>Иконка пользователя</span>
         Валентин Петухов</a>
-    <a class="header-action" href="">Выйти</a>
+    <a class="header-action button-exit" href="">Выйти</a>
     <a class="header-action" href="#"><span>Иконка сравнения</span>Сравнить</a>
     <a class="header-action" href="#"><span>Иконка корзина</span>Корзина</a>
     <nav class="main-navigation">
@@ -44,7 +44,7 @@
         <li><a class="active">Моноподы для селфи</a></li>
     </ul>
     <section class="filters">
-        <h2 class="visually-hidden">Фильтр</h2>
+        <h2 class="title">Фильтр:</h2>
         <!-- Форма для фильтра -->
         <form action="https://echo.htmlacademy.ru" method="get">
             <fieldset>  <!-- Ползунки slider с фильтрацией стоимости -->
@@ -95,16 +95,18 @@
         </form>
     </section>
     <section>
-        <h2>Сортировка:</h2>
-        <ul>
-            <li><a>По цене</a></li>
-            <li><a href="#">По типу</a></li>
-            <li><a href="#">По популярности</a></li>
-        </ul>
-        <ul>
-            <li><a href="#">Вверх</a></li>
-            <li><a>Вниз</a></li>
-        </ul>
+        <div class="sorting">
+            <h2 class="title">Сортировка:</h2>
+            <ul class="sorting-type">
+                <li><a class="active">По цене</a></li>
+                <li><a href="#">По типу</a></li>
+                <li><a href="#">По популярности</a></li>
+            </ul>
+            <ul class="sorting-direction">
+                <li><a href="#">Вверх</a></li>
+                <li><a class="active">Вниз</a></li>
+            </ul>
+        </div>
         <!-- Список товаров -->
         <h2 class="visually-hidden">Список товаров</h2>
         <ul class="catalog-list">
@@ -155,7 +157,7 @@
     <ul class="footer-actions">
         <li><a class="footer-action" href="#"><span>Иконка пользователя</span>
             Валентин Петухов</a>
-            <a class="footer-action" href="#">Выйти</a>
+            <a class="footer-action button-exit" href="#">Выйти</a>
         </li>
         <li><a class="footer-action" href="#"><span>Иконка сравнения</span>Сравнить</a></li>
         <li><a class="footer-action" href="#"><span>Иконка корзины</span>Корзина</a></li>

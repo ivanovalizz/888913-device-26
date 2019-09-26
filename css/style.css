@@ -1,3 +1,5 @@
+/* --- Локальное подключение шрифтов --- */
+
 @font-face {
     font-family: 'Gilroy';
     src: url('../fonts/gilroyextrabold.woff2');
@@ -18,6 +20,8 @@
     font-weight: 300;
     font-style: normal;
 }
+
+/* --- Глобальные стили --- */
 
 body {
     margin: 0;
@@ -42,16 +46,7 @@ body {
     overflow: hidden;
 }
 
-/* Сброс стилей у кнопки */
-
-.button-clear {
-    padding: 0;
-    border: none;
-    font: inherit;
-    color: inherit;
-    background-color: transparent;
-    cursor: pointer;
-}
+/* --- Header --- */
 
 .main-header {
     background-color: rgba(240, 197, 46, 0.5);
@@ -98,12 +93,113 @@ body {
 }
 
 .main-header a:hover,
-.main-header a:focus {
+.main-header a:focus,
+.header-action.button-exit:hover,
+.header-action.button-exit:focus {
     color: rgba(0, 0, 0, 0.6);
 }
 
-.main-header a:active {
+.main-header a:active,
+.header-action.button-exit {
     color: rgba(0, 0, 0, 0.3);
+}
+
+.header-action.button-exit:active {
+    color: #000000;
+}
+
+.footer-action.button-exit {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-action.button-exit:hover,
+.footer-action.button-exit:focus {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-action.button-exit:active {
+    color: rgba(255, 255, 255, 1);
+}
+
+/* --- Настройка всех кнопок --- */
+
+/* --- Сброс стилей у button --- */
+
+.button-clear {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+/* ------------------------------ */
+
+.button {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
+    letter-spacing: 3.6px;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+}
+
+.button:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+/* --- background для кнопок/ссылок ---*/
+.button::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 8px;
+    background-color: #f0c52e;
+    top: calc(50% - 4px);
+    left: 0;
+    z-index: -1;
+}
+
+/* --- Поведение background для кнопок/ссылок при наведении/фокусе/нажатии --- */
+.button:hover::after,
+.button:focus::after,
+.button:active::after,
+.advantages-button .button.active::after,
+.advantages-button .button.active:hover::after,
+.advantages-button .button.active:focus::after,
+.advantages-button .button.active:active::after{
+    top: 0;
+    height: 100%;
+}
+
+.advantages-button .button:active,
+.advantages-button .button.active,
+.advantages-button .button.active:hover,
+.advantages-button .button.active:focus,
+.advantages-button .button.active:active {
+    color: #f7e184;
+}
+
+.advantages-button .button:active::after,
+.advantages-button .button.active::after,
+.advantages-button .button.active:hover::after,
+.advantages-button .button.active:focus::after,
+.advantages-button .button.active:active::after {
+    background-color: #000000;
+}
+
+/* --- Стили для основного контента --- */
+
+.main-title {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 47px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: 0.47px;
+    color: #000000;
 }
 
 .about h2 {
@@ -119,6 +215,15 @@ body {
     text-transform: uppercase;
 }
 
+.catalog-list li,
+.popular-list li,
+.advantages-button li,
+.advantages-list li,
+.catalog-index li,
+.brand-list li {
+    list-style: none;
+}
+
 .partners-list {
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 16px;
@@ -127,39 +232,54 @@ body {
     color: #000000;
 }
 
-.button {
+.tagline {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 47px;
+    line-height: 56px;
+    font-weight: 800;
+    letter-spacing: 0.47px;
+    color: #000000;
+}
+
+.table td {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 300;
+    letter-spacing: 0.36px;
+    color: #000000;
+}
+
+.table th {
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.13px;
+    font-weight: 300;
+}
+
+.advantages-list h3 {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 47px;
+    line-height: 48px;
+    font-weight: 800;
+    letter-spacing: 0.47px;
+    color: #000000;
+}
+
+.catalog-index a {
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
     font-weight: 800;
-    letter-spacing: 3.6px;
     color: #000000;
-    text-transform: uppercase;
     text-decoration: none;
-    position: relative;
 }
 
-.button::after {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 8px;
-    background-color: #f0c52e;
-    top: calc(50% - 4px);
-    left: 0;
-    z-index: -1;
-}
-
-.button:hover::after,
-.button:focus::after,
-.button:active::after {
-    top: 0;
-    height: 100%;
-}
-
-.button:active {
+.catalog-index a:active {
     color: rgba(0, 0, 0, 0.3);
 }
+
+/* --- Footer --- */
 
 .main-footer {
     background-color: #464646;
@@ -181,14 +301,7 @@ body {
 
 .footer-advantages li,
 .social li,
-.footer-actions li,
-.breadcrumbs li,
-.catalog-list li,
-.popular-list li,
-.advantages-button li,
-.advantages-list li,
-.catalog-index li,
-.brand-list li {
+.footer-actions li {
     list-style: none;
 }
 
@@ -216,13 +329,22 @@ body {
     color: rgba(255, 255, 255, 0.3);
 }
 
-.main-title {
-    font-family: "Gilroy", Arial, sans-serif;
-    font-size: 47px;
-    font-weight: 800;
-    line-height: 48px;
-    letter-spacing: 0.47px;
-    color: #000000;
+.logo:hover,
+.logo:focus,
+.logo-academy:hover,
+.logo-academy:focus {
+    opacity: 0.6;
+}
+
+.logo:active,
+.logo-academy:active {
+    opacity: 0.3;
+}
+
+/* --- Breadcrumbs --- */
+
+.breadcrumbs li {
+    list-style: none;
 }
 
 .breadcrumbs a {
@@ -247,9 +369,11 @@ body {
     color: rgba(0, 0, 0, 0.3);
 }
 
-/*----------------*/
-/* Настройка фильтров */
-/*----------------*/
+/* --- Настройка фильтров --- */
+
+.filters h2{
+    background-color: #d9d9d9;
+}
 
 .filters {
     font-size: 14px;
@@ -257,6 +381,16 @@ body {
     letter-spacing: 0.14px;
     color: #000000;
     background-color: #ebebeb;
+}
+
+h2.title {
+  font-family: "Gilroy", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 800;
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
+    color: #000000;
 }
 
 .filters legend {
@@ -268,7 +402,8 @@ body {
     color: #000000;
 }
 
-.filter li {
+.filter li,
+.sorting li {
     list-style: none;
 }
 
@@ -280,6 +415,42 @@ body {
     color: #a6a6a6;
 }
 
+/* --- Sorting ---*/
+
+.sorting {
+    background-color: #ebebeb;
+}
+
+.sorting-type a,
+.sorting-direction a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.sorting-type a:hover,
+.sorting-type a:focus,
+.sorting-direction a:hover,
+.sorting-direction a:focus {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.sorting-type a:active,
+.sorting-direction a:active
+.sorting-type .active,
+.sorting-type .active:hover,
+.sorting-type .active:focus,
+.sorting-type .active:active,
+.sorting-direction .active,
+.sorting-direction .active:hover,
+.sorting-direction .active:focus,
+.sorting-direction .active:active {
+    color: rgba(0, 0, 0, 1);
+}
+
+/* --- Каталог товаров --- */
+
 .catalog-item a {
     text-decoration: none;
 }
@@ -287,7 +458,7 @@ body {
 .item-name a {
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 20px;
     letter-spacing: 0.18px;
     font-weight: 800;
     color: #000000;
@@ -311,6 +482,8 @@ body {
     line-height: 20px;
     color: rgba(0, 0, 0, 0.2);
 }
+
+/* --- Pagination --- */
 
 .pagination {
     font-family: "Gilroy", Arial, sans-serif;
@@ -364,71 +537,22 @@ body {
     color: rgba(0, 0, 0, 0.3);
 }
 
+/* --- Pop-up ---*/
+
 .popup-form,
 .popup-map {
     display: none;
 }
+/* <img src="img/logo-1.png" alt="Товары бренда DJI" width="260" height="100"> */
 
-.tagline {
-    font-family: "Gilroy", Arial, sans-serif;
-    font-size: 47px;
-    line-height: 56px;
-    font-weight: 800;
-    color: #000000;
+.brand-list li:first-child {
+    background-image: url("../img/logo-1.png");
+    width: 260px;
+    height: 100px;
+    background-repeat: no-repeat;
 }
 
-.table td {
-    font-family: "Gilroy", Arial, sans-serif;
-    font-size: 36px;
-    line-height: 48px;
-    font-weight: 300;
-    color: #000000;
-}
-
-.table th {
-    font-family: inherit;
-    font-size: 13px;
-    line-height: 20px;
-    font-weight: 300;
-}
-
-.advantages-list h3 {
-    font-family: "Gilroy", Arial, sans-serif;
-    font-size: 47px;
-    line-height: 48px;
-    font-weight: 800;
-    color: #000000;
-}
-
-.logo:hover,
-.logo:focus,
-.logo-academy:hover,
-.logo-academy:focus {
-    opacity: 0.6;
-}
-
-.logo:active,
-.logo-academy:active {
-    opacity: 0.3;
-}
-
-.catalog-index a {
-    font-family: "Gilroy", Arial, sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 800;
-    color: #000000;
-    text-decoration: none;
-}
-
-.catalog-index a:active {
-    color: rgba(0, 0, 0, 0.3);
-}
-
-.advantages-button .button:active {
-    color: #f7e184;
-}
-
-.advantages-button .button:active::after {
-    background-color: #000000;
+.brand-list li:hover {
+    background-image: url("../img/logo-1-color.png");
+    background-repeat: no-repeat;
 }
