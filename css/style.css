@@ -6,6 +6,13 @@
 }
 
 @font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/gilroylight.woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Open Sans';
     src: url('../fonts/opensans300.woff2');
     font-weight: 300;
@@ -77,14 +84,6 @@ body {
     display: block;
 }
 
-/*
-.dropdown-list:hover,
-.dropdown-list:focus,
-.dropdown-list:active {
-    display: block;
-}
-*/
-
 .dropdown-item {
     font-size: 15px;
     line-height: 36px;
@@ -107,7 +106,7 @@ body {
     color: rgba(0, 0, 0, 0.3);
 }
 
-.index-columns h2 {
+.about h2 {
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 47px;
     line-height: 48px;
@@ -154,7 +153,8 @@ body {
 .button:hover::after,
 .button:focus::after,
 .button:active::after {
-    top: calc(50% - 20px);
+    top: 0;
+    height: 100%;
 }
 
 .button:active {
@@ -183,7 +183,12 @@ body {
 .social li,
 .footer-actions li,
 .breadcrumbs li,
-.catalog-list li {
+.catalog-list li,
+.popular-list li,
+.advantages-button li,
+.advantages-list li,
+.catalog-index li,
+.brand-list li {
     list-style: none;
 }
 
@@ -246,7 +251,7 @@ body {
 /* Настройка фильтров */
 /*----------------*/
 
-.filter {
+.filters {
     font-size: 14px;
     line-height: 40px;
     letter-spacing: 0.14px;
@@ -254,7 +259,7 @@ body {
     background-color: #ebebeb;
 }
 
-.filter legend {
+.filters legend {
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
@@ -263,30 +268,29 @@ body {
     color: #000000;
 }
 
-.filter-color li,
-.filter-bluetooth li {
+.filter li {
     list-style: none;
 }
 
-.filter fieldset {
+.filters fieldset {
     border: none;
 }
 
-.filter input:disabled + label {
+.filters input:disabled + label {
     color: #a6a6a6;
 }
 
 .catalog-item a {
     text-decoration: none;
-    color: #000000;
 }
 
-.item-name {
+.item-name a {
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.18px;
     font-weight: 800;
+    color: #000000;
 }
 
 .comparison {
@@ -358,4 +362,49 @@ body {
 
 .pagination-button:active {
     color: rgba(0, 0, 0, 0.3);
+}
+
+.popup-form,
+.popup-map {
+    display: none;
+}
+
+.tagline {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 47px;
+    line-height: 56px;
+    font-weight: 800;
+    color: #000000;
+}
+
+.table td {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 300;
+    color: #000000;
+}
+
+.table th {
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 300;
+}
+
+.advantages-list h3 {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 47px;
+    line-height: 48px;
+    font-weight: 800;
+    color: #000000;
+}
+
+.logo:hover,
+.logo:focus {
+    opacity: 0.6;
+}
+
+.logo:active {
+    opacity: 0.3;
 }

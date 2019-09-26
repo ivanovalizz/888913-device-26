@@ -8,7 +8,7 @@
 </head>
 <body>
 <header class="main-header">
-    <a class="main-logo">
+    <a>
         <img src="img/logo-device.svg" alt="Логотип Device" width="164" height="35">
     </a>
     <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
@@ -38,17 +38,17 @@
 </header>
 <main class="main-content">
     <h1 class="visually-hidden">Device</h1>
-    <section>
+    <section class="popular-goods">
         <h2 class="visually-hidden">Популярные товары</h2>
-        <ul>
+        <ul class="popular-list">
             <li>
                 <h3 class="visually-hidden">Палка для селфи</h3>
                 <img src="img/slider-1.png" alt="Палка для селфи" width="384" height="486">
-                <p>Делай селфи, как Бен Стиллер!</p>
+                <p class="tagline">Делай селфи, как Бен Стиллер!</p>
                 <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом
                     всего 5 килограмм.</p>
-                <a href="#">Подробнее</a>
-                <table>
+                <a class="button" href="#">Подробнее</a>
+                <table class="table">
                     <tr>
                         <th>Длина палки</th>
                         <th>Вес палки</th>
@@ -64,10 +64,10 @@
             <li>
                 <h3 class="visually-hidden">Фитнес-браслет</h3>
                 <img src="img/slider-2.png" alt="Фитнес-браслет" width="345" height="485">
-                <p>Худеем правильно!</p>
+                <p class="tagline">Худеем правильно!</p>
                 <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-                <a href="#">Подробнее</a>
-                <table>
+                <a class="button" href="#">Подробнее</a>
+                <table class="table">
                     <tr>
                         <th>Без подзарядки</th>
                     </tr>
@@ -79,11 +79,11 @@
             <li>
                 <h3 class="visually-hidden">Квадрокоптер</h3>
                 <img src="img/slider-3.png" alt="Квадрокоптер" width="518" height="334">
-                <p>Порхает как бабочка, жалит как пчела!</p>
+                <p class="tagline">Порхает как бабочка, жалит как пчела!</p>
                 <p>Этот обычный, на первый взгляд, квадрокоптероснащен мощным лазером, замаскированным под стандартную
                     камеру.</p>
-                <a href="#">Подробнее</a>
-                <table>
+                <a class="button" href="#">Подробнее</a>
+                <table class="table">
                     <tr>
                         <th>Дальность полета</th>
                         <th>Радиус поражения</th>
@@ -98,7 +98,7 @@
     </section>
     <section>
         <h2 class="visually-hidden">Каталог товаров</h2>
-        <ul>
+        <ul class="catalog-index">
             <li>
                 <a href="#"><img src="#" alt="Виртуальная реальность">Виртуальная реальность</a>
             </li>
@@ -119,9 +119,9 @@
             </li>
         </ul>
     </section>
-    <section>
+    <section class="main-advantages">
         <h2 class="visually-hidden">Преимущества</h2>
-        <ul class="main-advantages">
+        <ul class="advantages-button">
             <li>
                 <button class="button-clear" type="button">Доставка</button>
             </li>
@@ -132,7 +132,7 @@
                 <button class="button-clear" type="button">Кредит</button>
             </li>
         </ul>
-        <ul>
+        <ul class="advantages-list">
             <li>
                 <h3>Доставка</h3>
                 <p>Мы с удовольствием доставим Ваш товар прямо к Вашему подъезду совершенно бесплатно! Ведь мы неплохо
@@ -150,9 +150,9 @@
             </li>
         </ul>
     </section>
-    <section>
+    <section class="brands">
         <h2 class="visually-hidden">Бренды</h2>
-        <ul>
+        <ul class="brand-list">
             <li>
                 <a href="#">
                     <img src="img/logo-1.png" alt="Товары бренда DJI" width="260" height="100">
@@ -179,7 +179,7 @@
             </li>
         </ul>
     </section>
-    <div class="index-columns">
+    <div class="about">
         <section class="info">
             <h2>О нас</h2>
             <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
@@ -230,7 +230,7 @@
     </ul>
     <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html.svg" alt="HTML Academy"></a>
 </footer>
-<section>
+<section class="popup-form">
     <!-- Форма обратной связи -->
     <h2 class="visually-hidden">
         Форма обратной связи
@@ -252,7 +252,7 @@
     </form>
     <button type="button">Закрыть</button>
 </section>
-<section>
+<section class="popup-map">
     <h2 class="visually-hidden">
         Как до нас добраться
     </h2>
