@@ -401,10 +401,34 @@ body {
 }
 
 .logo:hover,
-.logo:focus {
+.logo:focus,
+.logo-academy:hover,
+.logo-academy:focus {
     opacity: 0.6;
 }
 
-.logo:active {
+.logo:active,
+.logo-academy:active {
     opacity: 0.3;
+}
+
+.catalog-index a {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
+    color: #000000;
+    text-decoration: none;
+}
+
+.catalog-index a:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.advantages-button .button:active {
+    color: #f7e184;
+}
+
+.advantages-button .button:active::after {
+    background-color: #000000;
 }
