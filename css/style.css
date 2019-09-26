@@ -1,6 +1,15 @@
 @font-face {
-    font-family: Gilroy;
-    src: url(/fonts/gilroylight.woff2);
+    font-family: 'Gilroy';
+    src: url('../fonts/gilroyextrabold.woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/opensans300.woff2');
+    font-weight: 300;
+    font-style: normal;
 }
 
 body {
@@ -26,24 +35,14 @@ body {
     overflow: hidden;
 }
 
-/*
-.extra-bold {
-    font-family: "Gilroy", Arial, sans-serif;
-    font-weight: 800;
-}
-*/
+/* Сброс стилей у кнопки */
 
-/**
- * Сброс стилей у кнопки.
-*/
-button {
+.button-clear {
     padding: 0;
     border: none;
     font: inherit;
     color: inherit;
     background-color: transparent;
-    /* отображаем курсор в виде руки при наведении; некоторые
-      считают, что необходимо оставлять стрелочный вид для кнопок */
     cursor: pointer;
 }
 
@@ -55,18 +54,43 @@ button {
     text-decoration: none;
 }
 
-.navigation-item,
-.dropdown-item {
+.navigation-list li {
     list-style: none;
 }
 
-.navigation-item a {
+.navigation-item {
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
     font-weight: 800;
     letter-spacing: 3.6px;
     text-transform: uppercase;
+    color: #000000;
+}
+
+.dropdown-list {
+    display: none;
+}
+
+.menu-catalog:hover .dropdown-list,
+.menu-catalog:focus .dropdown-list {
+    display: block;
+}
+
+/*
+.dropdown-list:hover,
+.dropdown-list:focus,
+.dropdown-list:active {
+    display: block;
+}
+*/
+
+.dropdown-item {
+    font-size: 15px;
+    line-height: 36px;
+    font-weight: 300;
+    letter-spacing: 0.15px;
+    text-transform: none;
     color: #000000;
 }
 
@@ -83,37 +107,6 @@ button {
     color: rgba(0, 0, 0, 0.3);
 }
 
-.dropdown-list {
-    display: none;
-}
-
-.dropdown-item a {
-    font-family: "Open Sans", Arial, sans-serif;
-    font-size: 15px;
-    line-height: 36px;
-    font-weight: 300;
-    letter-spacing: 0.15px;
-    text-transform: none;
-    color: #000000;
-}
-
-.navigation-item:first-child:hover + .dropdown-list,
-.navigation-item:first-child:focus + .dropdown-list,
-.navigation-item:first-child:active + .dropdown-list,
-.menu-catalog:hover + .dropdown-list,
-.menu-catalog:focus + .dropdown-list,
-.menu-catalog:active + .dropdown-list {
-    display: block;
-}
-
-
-
-.dropdown-list:hover,
-.dropdown-list:focus,
-.dropdown-list:active {
-    display: block;
-}
-
 .index-columns h2 {
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 47px;
@@ -121,12 +114,6 @@ button {
     letter-spacing: 0.47px;
     font-weight: 800;
     color: #000000;
-}
-
-.index-columns p {
-    font-size: 15px;
-    line-height: 30px;
-    font-weight: 300;
 }
 
 .uppercase {
@@ -156,10 +143,10 @@ button {
 .button::after {
     position: absolute;
     content: '';
-    width: 260px;
+    width: 100%;
     height: 8px;
     background-color: #f0c52e;
-    top: calc(50% - 4px); /* Error */
+    top: calc(50% - 4px);
     left: 0;
     z-index: -1;
 }
@@ -167,14 +154,7 @@ button {
 .button:hover::after,
 .button:focus::after,
 .button:active::after {
-    position: absolute;
-    content: '';
-    width: 260px;
-    height: 40px;
-    background-color: #f0c52e;
-    top: calc(50% - 20px); /* Error */
-    left: 0;
-    z-index: -1;
+    top: calc(50% - 20px);
 }
 
 .button:active {
@@ -183,13 +163,10 @@ button {
 
 .main-footer {
     background-color: #464646;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 15px;
-    line-height: 30px;
+    color: #ffffff;
 }
 
-.footer-action {
-    /*font-family: inherit;*/
+.footer-actions {
     color: rgba(255, 255, 255, 0.7);
     line-height: 36px;
     letter-spacing: 0.15px;
@@ -224,14 +201,14 @@ button {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-advantages a:active,
-.footer-action:active {
-    color: rgba(255, 255, 255, 0.3);
-}
-
 .footer-action:hover,
 .footer-action:focus {
     color: #ffffff;
+}
+
+.footer-advantages a:active,
+.footer-action:active {
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .main-title {
@@ -249,16 +226,22 @@ button {
     line-height: 24px;
     color: rgba(0, 0, 0, 0.3);
 }
-/*
-.breadcrumbs a:not(:last-child):hover,
-.breadcrumbs a:not(:last-child):focus {
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
     color: rgba(0, 0, 0, 0.6);
 }
 
-.breadcrumbs a:not(:last-child):active {
+.breadcrumbs a:active {
     color: rgba(0, 0, 0, 0.1);
 }
-*/
+
+.breadcrumbs a.active:hover,
+.breadcrumbs a.active:focus,
+.breadcrumbs a.active:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
 /*----------------*/
 /* Настройка фильтров */
 /*----------------*/
@@ -295,6 +278,7 @@ button {
 
 .catalog-item a {
     text-decoration: none;
+    color: #000000;
 }
 
 .item-name {
@@ -303,10 +287,6 @@ button {
     line-height: 24px;
     letter-spacing: 0.18px;
     font-weight: 800;
-}
-
-.item-name a {
-    color: #000000;
 }
 
 .comparison {
@@ -358,8 +338,11 @@ button {
     color: rgba(0, 0, 0, 1);
 }
 
-/* Не могу придумать как сократить количество вложенных селекторов */
-.pagination-list li:first-child a {
+/* Текущая страница */
+.pagination-list a.active,
+.pagination-list a.active:hover,
+.pagination-list a.active:focus,
+.pagination-list a.active:active {
     color: rgba(0, 0, 0, 1);
 }
 
