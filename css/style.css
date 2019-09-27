@@ -437,7 +437,7 @@ h2.title {
 }
 
 .sorting-type a:active,
-.sorting-direction a:active
+.sorting-direction a:active,
 .sorting-type .active,
 .sorting-type .active:hover,
 .sorting-type .active:focus,
