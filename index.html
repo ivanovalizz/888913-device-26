@@ -7,59 +7,110 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<!--
 <header class="main-header">
     <a>
         <img src="img/logo-device.svg" alt="Логотип Device" width="164" height="35">
     </a>
-    <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-        <input type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-        <a class="button-search" href="#">Найти</a>
-    </form>
-    <a class="header-action" href="#"><span>Иконка пользователя</span>Войти</a>
-    <a class="header-action" href="#"><span>Иконка сравнения</span>Сравнить</a>
-    <a class="header-action" href="#"><span>Иконка корзины</span>Корзина</a>
-    <nav class="main-navigation">
-        <ul class="navigation-list">
-            <li class="menu-catalog"><a class="navigation-item" href="#">Каталог товаров</a>
-                <ul class="dropdown-list">
-                    <li><a href="#" class="dropdown-item">Виртуальная реальность</a></li>
-                    <li><a href="catalog.html" class="dropdown-item">Моноподы для селфи</a></li>
-                    <li><a href="#" class="dropdown-item">Экшн-камеры</a></li>
-                    <li><a href="#" class="dropdown-item">Фитнес-браслеты</a></li>
-                    <li><a href="#" class="dropdown-item">Умные часы</a></li>
-                    <li><a href="#" class="dropdown-item">Квадрокоптеры</a></li>
+    <div class="">
+        <div class="user-navigation-wrapper">
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+                <input type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+                <a class="button-search" href="#">Найти</a>
+            </form>
+            <a class="user-navigation" href="#"><span>Иконка пользователя</span>Войти</a>
+            <a class="user-navigation" href="#"><span>Иконка сравнения</span>Сравнить</a>
+            <a class="user-navigation" href="#"><span>Иконка корзины</span>Корзина</a>
+        </div>
+        <div class="main-navigation-wrapper">
+            <nav class="main-navigation">
+                <ul class="navigation-list">
+                    <li class="menu-catalog"><a class="navigation-item" href="#">Каталог товаров</a>
+                        <ul class="dropdown-list">
+                            <li><a href="#" class="dropdown-item">Виртуальная реальность</a></li>
+                            <li><a href="catalog.html" class="dropdown-item">Моноподы для селфи</a></li>
+                            <li><a href="#" class="dropdown-item">Экшн-камеры</a></li>
+                            <li><a href="#" class="dropdown-item">Фитнес-браслеты</a></li>
+                            <li><a href="#" class="dropdown-item">Умные часы</a></li>
+                            <li><a href="#" class="dropdown-item">Квадрокоптеры</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="navigation-item" href="#">Доставка</a></li>
+                    <li><a class="navigation-item" href="#">Гарантия</a></li>
+                    <li><a class="navigation-item" href="#">Контакты</a></li>
                 </ul>
-            </li>
-            <li><a class="navigation-item" href="#">Доставка</a></li>
-            <li><a class="navigation-item" href="#">Гарантия</a></li>
-            <li><a class="navigation-item" href="#">Контакты</a></li>
-        </ul>
-    </nav>
+            </nav>
+        </div>
+    </div>
 </header>
+-->
+<!-- ----------------------------------------------------------------------------------- -->
+<div class="container">
+    <header class="main-header">
+        <nav class="main-navigation">
+            <a class="main-header-logo">
+                <img src="img/logo-device.svg" alt="Логотип Device" width="164" height="35">
+            </a>
+            <div class="user-navigation-wrapper">
+                <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+                    <input type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+                    <a class="button-search" href="#">Найти</a>
+                </form>
+                <div class="temporary-wrapper">
+                    <a class="user-navigation" href="#"><span>Иконка пользователя</span>Войти</a>
+                    <a class="user-navigation" href="#"><span>Иконка сравнения</span>Сравнить</a>
+                    <a class="user-navigation" href="#"><span>Иконка корзины</span>Корзина</a>
+                </div>
+            </div>
+            <div class="site-navigation-wrapper">
+                <ul class="navigation-list">
+                    <li class="menu-catalog"><a class="navigation-item" href="#">Каталог товаров</a>
+                        <ul class="dropdown-list">
+                            <li><a href="#" class="dropdown-item">Виртуальная реальность</a></li>
+                            <li><a href="catalog.html" class="dropdown-item">Моноподы для селфи</a></li>
+                            <li><a href="#" class="dropdown-item">Экшн-камеры</a></li>
+                            <li><a href="#" class="dropdown-item">Фитнес-браслеты</a></li>
+                            <li><a href="#" class="dropdown-item">Умные часы</a></li>
+                            <li><a href="#" class="dropdown-item">Квадрокоптеры</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="navigation-item" href="#">Доставка</a></li>
+                    <li><a class="navigation-item" href="#">Гарантия</a></li>
+                    <li><a class="navigation-item" href="#">Контакты</a></li>
+                </ul>
+            </div>
+         </nav>
+    </header>
+</div>
+
+
+
 <main class="main-content">
     <h1 class="visually-hidden">Device</h1>
-    <section class="popular-goods">
+    <section class="popular-goods container">
         <h2 class="visually-hidden">Популярные товары</h2>
         <ul class="popular-list">
             <li>
                 <h3 class="visually-hidden">Палка для селфи</h3>
                 <img src="img/slider-1.png" alt="Палка для селфи" width="384" height="486">
-                <p class="tagline">Делай селфи, как Бен Стиллер!</p>
-                <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом
-                    всего 5 килограмм.</p>
-                <a class="button" href="#">Подробнее</a>
-                <table class="table">
-                    <tr>
-                        <th>Длина палки</th>
-                        <th>Вес палки</th>
-                        <th>Материал</th>
-                    </tr>
-                    <tr>
-                        <td>8,5 м</td>
-                        <td>5 кг</td>
-                        <td>Карбон</td>
-                    </tr>
-                </table>
+                <div class="content-box-right">
+                    <p class="tagline">Делай селфи, как Бен Стиллер!</p>
+                    <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом
+                        всего 5 килограмм.</p>
+                    <a class="button" href="#">Подробнее</a>
+                    <table class="table">
+                        <tr>
+                            <th>Длина палки</th>
+                            <th>Вес палки</th>
+                            <th>Материал</th>
+                        </tr>
+                        <tr>
+                            <td>8,5 м</td>
+                            <td>5 кг</td>
+                            <td>Карбон</td>
+                        </tr>
+                    </table>
+                </div>
             </li>
             <li>
                 <h3 class="visually-hidden">Фитнес-браслет</h3>
@@ -96,7 +147,8 @@
             </li>
         </ul>
     </section>
-    <section>
+
+    <section class="container visual-navigation">
         <h2 class="visually-hidden">Каталог товаров</h2>
         <ul class="catalog-index">
             <li>
@@ -119,38 +171,41 @@
             </li>
         </ul>
     </section>
-    <section class="main-advantages">
-        <h2 class="visually-hidden">Преимущества</h2>
-        <ul class="advantages-button">
-            <li>
-                <button class="button-clear button" type="button">Доставка</button>
-            </li>
-            <li>
-                <button class="button-clear button active" type="button">Гарантия</button>
-            </li>
-            <li>
-                <button class="button-clear button" type="button">Кредит</button>
-            </li>
-        </ul>
-        <ul class="advantages-list">
-            <li>
-                <h3>Доставка</h3>
-                <p>Мы с удовольствием доставим Ваш товар прямо к Вашему подъезду совершенно бесплатно! Ведь мы неплохо
-                    заработаем, поднимая его на Ваш этаж.</p>
-            </li>
-            <li>
-                <h3>Гарантия</h3>
-                <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам
-                    новый. Товар, не дом, конечно же.</p>
-            </li>
-            <li>
-                <h3>Кредит</h3>
-                <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
-                    условия кредита. Выгодные для нашего банка, разумеется.</p>
-            </li>
-        </ul>
-    </section>
-    <section class="brands">
+    <div class="advantages-background">
+        <section class="main-advantages container">
+            <h2 class="visually-hidden">Преимущества</h2>
+            <ul class="advantages-button">
+                <li>
+                    <button class="button-clear button" type="button">Доставка</button>
+                </li>
+                <li>
+                    <button class="button-clear button active" type="button">Гарантия</button>
+                </li>
+                <li>
+                    <button class="button-clear button" type="button">Кредит</button>
+                </li>
+            </ul>
+            <ul class="advantages-list">
+                <li>
+                    <h3>Доставка</h3>
+                    <p>Мы с удовольствием доставим Ваш товар прямо к Вашему подъезду совершенно бесплатно! Ведь мы неплохо
+                        заработаем, поднимая его на Ваш этаж.</p>
+                </li>
+                <li>
+                    <h3>Гарантия</h3>
+                    <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам
+                        новый. Товар, не дом, конечно же.</p>
+                </li>
+                <li>
+                    <h3>Кредит</h3>
+                    <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
+                        условия кредита. Выгодные для нашего банка, разумеется.</p>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+    <section class="brands container">
         <h2 class="visually-hidden">Бренды</h2>
         <ul class="brand-list">
             <li>
@@ -175,7 +230,8 @@
             </li>
         </ul>
     </section>
-    <div class="about">
+
+    <div class="about container">
         <section class="info">
             <h2>О нас</h2>
             <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
@@ -188,7 +244,7 @@
             </ul>
             <a class="button" href="#">Подробнее о нас</a>
         </section>
-        <section class="contacts">
+        <section class="contacts content-box-right">
             <h2>Контакты</h2>
             <p>Вы можете забрать товар сами, заехав в наш офис. Заодно Вы сможете проверить работоспособность покупки.
                 Всякое бывает.</p>
@@ -197,37 +253,42 @@
         </section>
     </div>
 </main>
+
 <footer class="main-footer">
-    <a class="footer-logo">
-        <img src="img/logo-device.svg" alt="Логотип Device" width="164" height="35">
-    </a>
-    <p>г. Москва, ул. Строителей, 15</p>
-    <p>Тел.: <a class="phone-number" href="tel:+74954959595">+7(495)495-95-95</a></p>
-    <ul class="footer-actions">
-        <li><a class="footer-action" href="#"><span>Иконка пользователя</span>Войти</a></li>
-        <li><a class="footer-action" href="#"><span>Иконка сравнения</span>Сравнить</a></li>
-        <li><a class="footer-action" href="#"><span>Иконка корзины</span>Корзина</a></li>
-    </ul>
-    <ul class="footer-advantages">
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Контакты</a></li>
-    </ul>
-    <ul class="social">
-        <li>
-            <a href="#" aria-label="Ссылка на страницу Device в Фейсбук"></a>
-        </li>
-        <li>
-            <a href="#" aria-label="Ссылка на страницу Device в Инстаграм"></a>
-        </li>
-        <li>
-            <a href="#" aria-label="Ссылка на страницу Device в Твиттер"></a>
-        </li>
-    </ul>
-    <a class="logo-academy" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html.svg" alt="HTML Academy"></a>
+    <div class="container">
+        <a class="footer-logo">
+            <img src="img/logo-device.svg" alt="Логотип Device" width="164" height="35">
+        </a>
+        <p>г. Москва, ул. Строителей, 15</p>
+        <p>Тел.: <a class="phone-number" href="tel:+74954959595">+7(495)495-95-95</a></p>
+        <ul class="footer-actions">
+            <li><a class="footer-action" href="#"><span>Иконка пользователя</span>Войти</a></li>
+            <li><a class="footer-action" href="#"><span>Иконка сравнения</span>Сравнить</a></li>
+            <li><a class="footer-action" href="#"><span>Иконка корзины</span>Корзина</a></li>
+        </ul>
+        <ul class="footer-advantages">
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <ul class="social">
+            <li>
+                <a href="#" aria-label="Ссылка на страницу Device в Фейсбук"></a>
+            </li>
+            <li>
+                <a href="#" aria-label="Ссылка на страницу Device в Инстаграм"></a>
+            </li>
+            <li>
+                <a href="#" aria-label="Ссылка на страницу Device в Твиттер"></a>
+            </li>
+        </ul>
+        <a class="logo-academy" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html.svg" alt="HTML Academy"></a>
+    </div>
 </footer>
 <section class="popup-form">
+
     <!-- Форма обратной связи -->
+<!--
     <h2 class="visually-hidden">
         Форма обратной связи
     </h2>
@@ -256,6 +317,8 @@
         <img src="img/map.jpg" alt="Офис компании по адресу ул. Строителей 15, Москва" width="960" height="559">
     </p>
     <button type="button">Закрыть</button>
+-->
 </section>
+
 </body>
 </html>
