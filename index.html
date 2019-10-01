@@ -7,84 +7,40 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!--
-<header class="main-header">
-    <a>
+
+<header class="main-header container">
+    <a class="main-header-logo">
         <img src="img/logo-device.svg" alt="Логотип Device" width="164" height="35">
     </a>
-    <div class="">
-        <div class="user-navigation-wrapper">
-            <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-                <input type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-                <a class="button-search" href="#">Найти</a>
-            </form>
+    <div class="user-navigation-wrapper">
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+            <input type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+            <a class="button-search" href="#">Найти</a>
+        </form>
+        <div class="site-navigation">
             <a class="user-navigation" href="#"><span>Иконка пользователя</span>Войти</a>
             <a class="user-navigation" href="#"><span>Иконка сравнения</span>Сравнить</a>
             <a class="user-navigation" href="#"><span>Иконка корзины</span>Корзина</a>
         </div>
-        <div class="main-navigation-wrapper">
-            <nav class="main-navigation">
-                <ul class="navigation-list">
-                    <li class="menu-catalog"><a class="navigation-item" href="#">Каталог товаров</a>
-                        <ul class="dropdown-list">
-                            <li><a href="#" class="dropdown-item">Виртуальная реальность</a></li>
-                            <li><a href="catalog.html" class="dropdown-item">Моноподы для селфи</a></li>
-                            <li><a href="#" class="dropdown-item">Экшн-камеры</a></li>
-                            <li><a href="#" class="dropdown-item">Фитнес-браслеты</a></li>
-                            <li><a href="#" class="dropdown-item">Умные часы</a></li>
-                            <li><a href="#" class="dropdown-item">Квадрокоптеры</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="navigation-item" href="#">Доставка</a></li>
-                    <li><a class="navigation-item" href="#">Гарантия</a></li>
-                    <li><a class="navigation-item" href="#">Контакты</a></li>
-                </ul>
-            </nav>
-        </div>
     </div>
-</header>
--->
-<!-- ----------------------------------------------------------------------------------- -->
-<div class="container">
-    <header class="main-header">
-        <nav class="main-navigation">
-            <a class="main-header-logo">
-                <img src="img/logo-device.svg" alt="Логотип Device" width="164" height="35">
-            </a>
-            <div class="user-navigation-wrapper">
-                <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-                    <input type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-                    <a class="button-search" href="#">Найти</a>
-                </form>
-                <div class="temporary-wrapper">
-                    <a class="user-navigation" href="#"><span>Иконка пользователя</span>Войти</a>
-                    <a class="user-navigation" href="#"><span>Иконка сравнения</span>Сравнить</a>
-                    <a class="user-navigation" href="#"><span>Иконка корзины</span>Корзина</a>
-                </div>
-            </div>
-            <div class="site-navigation-wrapper">
-                <ul class="navigation-list">
-                    <li class="menu-catalog"><a class="navigation-item" href="#">Каталог товаров</a>
-                        <ul class="dropdown-list">
-                            <li><a href="#" class="dropdown-item">Виртуальная реальность</a></li>
-                            <li><a href="catalog.html" class="dropdown-item">Моноподы для селфи</a></li>
-                            <li><a href="#" class="dropdown-item">Экшн-камеры</a></li>
-                            <li><a href="#" class="dropdown-item">Фитнес-браслеты</a></li>
-                            <li><a href="#" class="dropdown-item">Умные часы</a></li>
-                            <li><a href="#" class="dropdown-item">Квадрокоптеры</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="navigation-item" href="#">Доставка</a></li>
-                    <li><a class="navigation-item" href="#">Гарантия</a></li>
-                    <li><a class="navigation-item" href="#">Контакты</a></li>
+    <nav class="main-navigation">
+        <ul class="navigation-list">
+            <li class="menu-catalog"><a class="navigation-item" href="#">Каталог товаров</a>
+                <ul class="dropdown-list">
+                    <li><a href="#" class="dropdown-item">Виртуальная реальность</a></li>
+                    <li><a href="catalog.html" class="dropdown-item">Моноподы для селфи</a></li>
+                    <li><a href="#" class="dropdown-item">Экшн-камеры</a></li>
+                    <li><a href="#" class="dropdown-item">Фитнес-браслеты</a></li>
+                    <li><a href="#" class="dropdown-item">Умные часы</a></li>
+                    <li><a href="#" class="dropdown-item">Квадрокоптеры</a></li>
                 </ul>
-            </div>
-         </nav>
-    </header>
-</div>
-
-
-
+            </li>
+            <li><a class="navigation-item" href="#">Доставка</a></li>
+            <li><a class="navigation-item" href="#">Гарантия</a></li>
+            <li><a class="navigation-item" href="#">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
 <main class="main-content">
     <h1 class="visually-hidden">Device</h1>
     <section class="popular-goods container">
@@ -93,24 +49,22 @@
             <li>
                 <h3 class="visually-hidden">Палка для селфи</h3>
                 <img src="img/slider-1.png" alt="Палка для селфи" width="384" height="486">
-                <div class="content-box-right">
-                    <p class="tagline">Делай селфи, как Бен Стиллер!</p>
-                    <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом
-                        всего 5 килограмм.</p>
-                    <a class="button" href="#">Подробнее</a>
-                    <table class="table">
-                        <tr>
-                            <th>Длина палки</th>
-                            <th>Вес палки</th>
-                            <th>Материал</th>
-                        </tr>
-                        <tr>
-                            <td>8,5 м</td>
-                            <td>5 кг</td>
-                            <td>Карбон</td>
-                        </tr>
-                    </table>
-                </div>
+                <p class="tagline">Делай селфи, как Бен Стиллер!</p>
+                <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом
+                    всего 5 килограмм.</p>
+                <a class="button" href="#">Подробнее</a>
+                <table class="table">
+                    <tr>
+                        <th>Длина палки</th>
+                        <th>Вес палки</th>
+                        <th>Материал</th>
+                    </tr>
+                    <tr>
+                        <td>8,5 м</td>
+                        <td>5 кг</td>
+                        <td>Карбон</td>
+                    </tr>
+                </table>
             </li>
             <li>
                 <h3 class="visually-hidden">Фитнес-браслет</h3>
@@ -171,8 +125,8 @@
             </li>
         </ul>
     </section>
-    <div class="advantages-background">
-        <section class="main-advantages container">
+    <section class="main-advantages">
+        <div class="container">
             <h2 class="visually-hidden">Преимущества</h2>
             <ul class="advantages-button">
                 <li>
@@ -202,9 +156,8 @@
                         условия кредита. Выгодные для нашего банка, разумеется.</p>
                 </li>
             </ul>
-        </section>
-
-    </div>
+        </div>
+    </section>
     <section class="brands container">
         <h2 class="visually-hidden">Бренды</h2>
         <ul class="brand-list">
@@ -244,7 +197,7 @@
             </ul>
             <a class="button" href="#">Подробнее о нас</a>
         </section>
-        <section class="contacts content-box-right">
+        <section class="contacts">
             <h2>Контакты</h2>
             <p>Вы можете забрать товар сами, заехав в наш офис. Заодно Вы сможете проверить работоспособность покупки.
                 Всякое бывает.</p>

@@ -559,12 +559,8 @@ body {
     margin: 0 auto;
 }
 
-.main-navigation {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    margin-top: 21px;
+.main-header {
+    margin-top: 40px;
     padding: 0 60px;
 }
 
@@ -579,39 +575,35 @@ body {
     padding: 0;
 }
 
-span {
+.footer-action span {
     display: none; /*vremenno*/
 }
 
-.temporary-wrapper,
-.search-form {
-    width: 580px;
-}
-
-.popular-list li:nth-child(2), /*vremenno*/
-.popular-list li:last-child {
-    display: none;
-}
-
-.content-box-right {
-    width: 561px;
+.search-form,
+.site-navigation {
+    width: 50%;
 }
 
 .popular-list li {
-    display: flex;
-    justify-content: space-between;
+    display: none;
+}
+
+.visual-navigation {
+
+    padding-top: 106px;
+    padding-bottom: 162px;
 }
 
 .catalog-index {
     display: flex;
     justify-content: space-between;
 
-    margin-top: 106px;
+    margin: 0;
     padding: 0;
 }
 
 .catalog-index li {
-    margin: 0;
+    /*margin: 0;*/
     margin-right: 40px;
 }
 
@@ -627,22 +619,19 @@ span {
     background-color: lightpink;
 }
 
-.advantages-background {
-    background-color: #e5e5e5;
+.main-advantages .container {
+    display: flex;
 }
 
 .advantages-button {
+    display: none;
     padding: 0;
     margin: 0;
 }
 
 .advantages-list {
-    padding: 0;
-}
-
-.advantages-list li:nth-child(2),
-.advantages-list li:last-child {
     display: none;
+    padding: 0;
 }
 
 .brand-list {
@@ -650,18 +639,17 @@ span {
     justify-content: space-between;
 
     margin: 0;
-    margin-top: 163px;
-    padding: 0;
+    padding: 93px 0;
+}
+
+.brand-list li {
+    margin-right: 40px;
 }
 
 .brand-list a {
     display: block;
     width: 260px;
-    height: 100px;
-}
-
-.brand-list li {
-    margin-right: 40px;
+    min-height: 100px;
 }
 
 .brand-list li:last-child {
@@ -671,25 +659,24 @@ span {
 .about {
     display: flex;
     justify-content: space-between;
+
+    padding-bottom: 82px;
 }
 
 .about h2 {
     margin: 0;
     margin-bottom: 59px;
-
 }
 
-.info {
-    margin-top: 93px;
-    width: 462px;
+.about section {
+    width: 50%;
 }
 
 .contacts {
-    margin-top: 93px;
-    width: 560px;
+    padding-left: 20px;
 }
 
-.contacts p {
+.about p {
     margin: 0;
     padding: 0;
     margin-bottom: 44px;
@@ -697,7 +684,10 @@ span {
 
 .about .button {
     margin-top: 69px;
-    margin-bottom: 82px;
+}
+
+.partners-list {
+    padding-top: 40px;
 }
 
 .catalog-columns {
@@ -714,7 +704,6 @@ span {
 .sorting {
     display: flex;
     width: 833px;
-    height: 71px;
 }
 
 .catalog-list {
@@ -722,10 +711,8 @@ span {
     flex-wrap: wrap;
     width: 833px;
 
-    padding: 0;
     margin: 0;
-    margin-top: 69px;
-    margin-left: 73px;
+    padding: 69px 0 62px 73px;
 }
 
 .catalog-item {

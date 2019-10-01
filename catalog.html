@@ -7,18 +7,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!--
-<header class="main-header">
-    <a class="logo main-logo" href="index.html"><img src="img/logo-device.svg" alt="Логотип Device" width="164" height="35"></a>
-    <form action="https://echo.htmlacademy.ru" method="get">
-        <input type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-        <a href="">Поиск</a>
-    </form>
-    <a class="header-action" href="#"><span>Иконка пользователя</span>
-        Валентин Петухов</a>
-    <a class="header-action button-exit" href="">Выйти</a>
-    <a class="header-action" href="#"><span>Иконка сравнения</span>Сравнить</a>
-    <a class="header-action" href="#"><span>Иконка корзина</span>Корзина</a>
+<header class="main-header container">
+    <a class="main-header-logo">
+        <img src="img/logo-device.svg" alt="Логотип Device" width="164" height="35">
+    </a>
+    <div class="user-navigation-wrapper">
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+            <input type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+            <a class="button-search" href="#">Найти</a>
+        </form>
+        <div class="site-navigation">
+            <a class="user-navigation" href="#"><span>Иконка пользователя</span>Войти</a>
+            <a class="user-navigation" href="#"><span>Иконка сравнения</span>Сравнить</a>
+            <a class="user-navigation" href="#"><span>Иконка корзины</span>Корзина</a>
+        </div>
+    </div>
     <nav class="main-navigation">
         <ul class="navigation-list">
             <li class="menu-catalog"><a class="navigation-item" href="#">Каталог товаров</a>
@@ -37,45 +40,6 @@
         </ul>
     </nav>
 </header>
--->
-<div class="container">
-    <header class="main-header">
-        <nav class="main-navigation">
-            <a class="main-header-logo">
-                <img src="img/logo-device.svg" alt="Логотип Device" width="164" height="35">
-            </a>
-            <div class="user-navigation-wrapper">
-                <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-                    <input type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-                    <a class="button-search" href="#">Найти</a>
-                </form>
-                <div class="temporary-wrapper">
-                    <a class="user-navigation" href="#"><span>Иконка пользователя</span>Войти</a>
-                    <a class="user-navigation" href="#"><span>Иконка сравнения</span>Сравнить</a>
-                    <a class="user-navigation" href="#"><span>Иконка корзины</span>Корзина</a>
-                </div>
-            </div>
-            <div class="site-navigation-wrapper">
-                <ul class="navigation-list">
-                    <li class="menu-catalog"><a class="navigation-item" href="#">Каталог товаров</a>
-                        <ul class="dropdown-list">
-                            <li><a href="#" class="dropdown-item">Виртуальная реальность</a></li>
-                            <li><a href="catalog.html" class="dropdown-item">Моноподы для селфи</a></li>
-                            <li><a href="#" class="dropdown-item">Экшн-камеры</a></li>
-                            <li><a href="#" class="dropdown-item">Фитнес-браслеты</a></li>
-                            <li><a href="#" class="dropdown-item">Умные часы</a></li>
-                            <li><a href="#" class="dropdown-item">Квадрокоптеры</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="navigation-item" href="#">Доставка</a></li>
-                    <li><a class="navigation-item" href="#">Гарантия</a></li>
-                    <li><a class="navigation-item" href="#">Контакты</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-</div>
-
 <main class="container">
     <h1 class="main-title">Моноподы для селфи</h1>
     <ul class="breadcrumbs">
