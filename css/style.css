@@ -369,11 +369,11 @@ body {
 
 /* --- Настройка фильтров --- */
 
-.filters h2{
+.filters-section h2{
     background-color: #d9d9d9;
 }
 
-.filters {
+.filters-section {
     font-size: 14px;
     line-height: 40px;
     letter-spacing: 0.14px;
@@ -391,7 +391,7 @@ h2.title {
     color: #000000;
 }
 
-.filters legend {
+.filters-section legend {
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
@@ -405,11 +405,11 @@ h2.title {
     list-style: none;
 }
 
-.filters fieldset {
+.filters-section fieldset {
     border: none;
 }
 
-.filters input:disabled + label {
+.filters-section input:disabled + label {
     color: #a6a6a6;
 }
 
@@ -591,7 +591,7 @@ body {
 .visual-navigation {
 
     padding-top: 106px;
-    padding-bottom: 162px;
+    padding-bottom: 84px;
 }
 
 .catalog-index {
@@ -692,27 +692,40 @@ body {
 
 .catalog-columns {
     display: flex;
-    justify-content: space-between;
 }
 
-.catalog-columns .title {
+/*.catalog-columns .title {
     margin:0;
     padding: 0;
-    /*height: 71px;*/
+}*/
+
+.filters-section .title {
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+}
+
+.filters-section {
+    width: 268px;
+}
+
+.catalog-section {
+    padding-bottom: 77px;
+
+    width: 833px;
 }
 
 .sorting {
     display: flex;
-    width: 833px;
 }
 
 .catalog-list {
     display: flex;
     flex-wrap: wrap;
-    width: 833px;
 
     margin: 0;
-    padding: 69px 0 62px 73px;
+    padding: 69px 0 41px 73px;
 }
 
 .catalog-item {
@@ -729,4 +742,25 @@ body {
 .pagination {
     display: flex;
     justify-content: space-between;
+    margin-left: auto;
+    width: 759px;
 }
+
+.main-footer .footer-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-actions {
+    display: flex;
+}
+
+.footer-advantages {
+    display: flex;
+    padding: 0;
+}
+
+.footer-advantages li:not(:last-child) {
+    margin-right: 38px;
+}
+
