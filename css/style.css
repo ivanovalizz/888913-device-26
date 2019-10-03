@@ -56,6 +56,11 @@ body {
     text-decoration: none;
 }
 
+.main-header-logo {
+    display: inline-block;
+    transform: translateY(-19px);
+}
+
 .navigation-list li {
     list-style: none;
 }
@@ -577,6 +582,7 @@ body {
     display: flex;
 
     padding: 0;
+    margin: 0;
 }
 
 .footer-action span {
@@ -588,8 +594,55 @@ body {
     width: 50%;
 }
 
-.popular-list li {
+.popular-list li:not(:first-child) {
     display: none;
+}
+
+.popular-list {
+    padding: 0;
+    margin: 0;
+}
+
+.popular-list li {
+    display: flex;
+}
+
+.popular-columns {
+    width: 50%;
+}
+
+.popular-columns.image {
+    padding-right: 106px;
+    padding-left: 90px;
+
+    /*background-color: lightpink;*/ /*для визуализации*/
+}
+
+.popular-columns.content {
+    padding-right: 82px;
+    padding-left: 20px;
+
+    /*background-color: darkseagreen;*/ /*для визуализации*/
+}
+
+.tagline {
+    margin-top: 90px;
+    margin-bottom: 31px;
+}
+
+.popular-goods a.button {
+    margin-top: 48px;
+    margin-bottom: 76px;
+}
+
+
+.table td {
+    padding: 0;
+    padding-right: 80px;
+}
+
+.table td:last-child {
+    padding-right: 0;
 }
 
 .visual-navigation {
@@ -637,11 +690,15 @@ body {
     padding-top: 80px;
     margin: 0;
     width: 285px;
-    background-color: lightpink; /*для наглядности*/
+
     border-right: 7px solid #000000;
 }
 
-.advantages-list li:not(:last-child) {
+.advantages-button .button {
+    margin-bottom: 24px;
+}
+
+.advantages-list li:not(:first-child) {
     display: none;
     padding: 0;
 }
@@ -650,10 +707,9 @@ body {
     margin: 0;
     padding-top: 80px;
     padding-right: 334px;
-    /*padding-bottom: 82px;*/
+    padding-bottom: 82px;
     padding-left: 116px;
-
-    background-color: darkseagreen; /*для наглядности*/
+    width: 886px;
 }
 
 .advantages-list h3 {
@@ -718,17 +774,13 @@ body {
 }
 
 .partners-list {
+    margin: 0;
     padding-top: 40px;
 }
 
 .catalog-columns {
     display: flex;
 }
-
-/*.catalog-columns .title {
-    margin:0;
-    padding: 0;
-}*/
 
 .filters-section .title {
     margin: 0;
@@ -780,6 +832,10 @@ body {
 .main-footer .footer-row {
     display: flex;
     justify-content: space-between;
+}
+
+.main-footer {
+    padding-top: 65px;
 }
 
 .footer-actions {
