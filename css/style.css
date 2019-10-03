@@ -189,6 +189,10 @@ body {
     background: #000000;
 }
 
+.advantages-button .button.active {
+    width: 278px;
+}
+
 /* --- Стили для основного контента --- */
 
 .main-title {
@@ -619,19 +623,46 @@ body {
     background-color: lightpink;
 }
 
-.main-advantages .container {
+.main-advantages {
+    background-color: #e5e5e5;
+}
+
+.advantages-columns {
     display: flex;
 }
 
 .advantages-button {
+    padding: 0;
+    padding-top: 80px;
+    margin: 0;
+    margin-bottom: 70px;
+    background-color: lightpink; /*для наглядности*/
+    border-right: 7px solid #000000;
+}
+
+.advantages-list li:not(:last-child) {
     display: none;
     padding: 0;
-    margin: 0;
 }
 
 .advantages-list {
-    display: none;
-    padding: 0;
+    margin: 0;
+    padding: 80px 334px 151px 116px;
+    /*padding-top: 80px;
+    padding-right: 334px;
+    padding-bottom: 151px;
+    padding-left: 116px;*/
+
+    background-color: darkseagreen; /*для наглядности*/
+}
+
+.advantages-list h3 {
+    margin: 0;
+}
+
+.advantages-list p {
+    margin-top: 43px;
+    margin-bottom: 0;
 }
 
 .brand-list {
