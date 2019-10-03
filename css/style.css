@@ -190,7 +190,7 @@ body {
 }
 
 .advantages-button .button.active {
-    width: 278px;
+    width: 100%;
 }
 
 /* --- Стили для основного контента --- */
@@ -624,18 +624,19 @@ body {
 }
 
 .main-advantages {
-    background-color: #e5e5e5;
+    background-image: linear-gradient(180deg, transparent 100px, #e5e5e5 100px);
 }
 
 .advantages-columns {
     display: flex;
+    padding-bottom: 70px;
 }
 
 .advantages-button {
     padding: 0;
     padding-top: 80px;
     margin: 0;
-    margin-bottom: 70px;
+    width: 285px;
     background-color: lightpink; /*для наглядности*/
     border-right: 7px solid #000000;
 }
@@ -647,11 +648,10 @@ body {
 
 .advantages-list {
     margin: 0;
-    padding: 80px 334px 151px 116px;
-    /*padding-top: 80px;
+    padding-top: 80px;
     padding-right: 334px;
-    padding-bottom: 151px;
-    padding-left: 116px;*/
+    /*padding-bottom: 82px;*/
+    padding-left: 116px;
 
     background-color: darkseagreen; /*для наглядности*/
 }
