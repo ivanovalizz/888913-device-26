@@ -52,10 +52,24 @@
             <h2 class="title">Фильтр:</h2>
             <!-- Форма для фильтра -->
             <form action="https://echo.htmlacademy.ru" method="get">
-                <fieldset>  <!-- Ползунки slider с фильтрацией стоимости -->
-                    <legend>Стоимость</legend>
-                    <div class="filter-prices">
-
+                <fieldset class="filter-item">
+                    <legend>Стоимость:</legend>
+                    <div class="range-filter">
+                        <div class="range-controls">
+                            <div class="scale">
+                                <div class="bar"></div>
+                            </div>
+                            <div class="toggle toggle-min">
+                                <img src="img/filter-button.svg" alt="Ползунок минимальной границы стоимости">
+                            </div>
+                            <div class="toggle toggle-max">
+                                <img src="img/filter-button.svg" alt="Ползунок максимальной границы стоимости">
+                            </div>
+                        </div>
+                        <div class="price-controls">
+                            <span class="min-price"></span>
+                            <span class="max-price"></span>
+                        </div>
                     </div>
                 </fieldset>
                 <fieldset>
