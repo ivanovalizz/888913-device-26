@@ -378,16 +378,13 @@ body {
 
 /* --- Настройка фильтров --- */
 
-.filters-section h2{
-    background-color: #d9d9d9;
-}
+
 
 .filters-section {
     font-size: 14px;
     line-height: 40px;
     letter-spacing: 0.14px;
     color: #000000;
-    background-color: #ebebeb;
 }
 
 h2.title {
@@ -423,10 +420,6 @@ h2.title {
 }
 
 /* --- Sorting ---*/
-
-.sorting {
-    background-color: #ebebeb;
-}
 
 .sorting-type a,
 .sorting-direction a {
@@ -788,30 +781,44 @@ body {
     padding: 0;
 }
 
-.catalog-columns {
+.sorting-background {
+    background: linear-gradient(to right, #d9d9d9 33%, #ebebeb 33%);
+}
+
+.catalog-content-background {
+    background: linear-gradient(to right, #ebebeb 33%, transparent 33%);
+}
+
+.catalog-columns,
+.sorting-wrapper {
     display: flex;
 }
 
-.filters-section .title {
+.sorting-wrapper > .title {
     margin: 0;
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 60px;
 }
 
+.sorting-wrapper > .title,
 .filters-section {
     width: 268px;
 }
 
+.sorting,
+.catalog-section {
+    width: 833px;
+}
+
 .catalog-section {
     padding-bottom: 77px;
-
-    width: 833px;
 }
 
 .sorting {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .sorting-type {
@@ -913,7 +920,7 @@ body {
 /*breadcrumbs*/
 
 .breadcrumbs {
-    display: inline-block;
+    display: flex;
     margin: 0;
     margin-bottom: 50px;
     margin-left: 60px;
@@ -922,7 +929,7 @@ body {
 
 .breadcrumbs li {
     position: relative;
-    float: left;
+    /*float: left;*/
 
     margin-left: 19px;
     padding-right: 16px;
