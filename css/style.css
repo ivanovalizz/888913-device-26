@@ -782,6 +782,12 @@ body {
     margin: 0;
 }
 
+.main-title {
+    margin-top: 44px;
+    margin-left: 60px;
+    padding: 0;
+}
+
 .catalog-columns {
     display: flex;
 }
@@ -805,6 +811,38 @@ body {
 
 .sorting {
     display: flex;
+    justify-content: space-between;
+}
+
+.sorting-type {
+    display: flex;
+    margin-right: 0;
+}
+
+.sorting-type li {
+    margin-right: 30px;
+}
+
+.sorting-direction {
+    display: flex;
+}
+
+.sorting-direction .up {
+    display: inline-block;
+    background: url("../img/icon-up-dir.svg") no-repeat center center;
+    color: transparent;
+    background-size: 10px 11px;
+}
+
+.sorting-direction .down {
+    display: inline-block;
+    background: url("../img/icon-down-dir.svg") no-repeat center center;
+    color: transparent;
+    background-size: 10px 11px;
+}
+
+.sorting .title {
+    margin: 30px 55px 30px 74px;
 }
 
 .catalog-list {
@@ -831,6 +869,23 @@ body {
     justify-content: space-between;
     margin-left: auto;
     width: 759px;
+    text-transform: uppercase;
+}
+
+.pagination-button {
+    display: block;
+    padding: 22px 30px;
+}
+
+.pagination-list {
+    display: flex;
+
+    margin: 0;
+    padding: 22px 0;
+}
+
+.pagination-list li:not(:last-child) {
+    margin-right: 30px;
 }
 
 .main-footer .footer-row {
@@ -853,6 +908,45 @@ body {
 
 .footer-advantages li:not(:last-child) {
     margin-right: 38px;
+}
+
+/*breadcrumbs*/
+
+.breadcrumbs {
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 50px;
+    margin-left: 60px;
+    padding: 0;
+}
+
+.breadcrumbs li {
+    position: relative;
+    float: left;
+
+    margin-left: 19px;
+    padding-right: 16px;
+
+}
+
+.breadcrumbs li::after {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    bottom: 0;
+
+    background: url("../img/nav-arrow.svg") no-repeat center center;
+
+    width: 4px;
+    content: "";
+}
+
+.breadcrumbs li:first-child {
+    margin: 0;
+}
+
+.breadcrumbs li:last-child::after {
+    display: none;
 }
 
 /*filter price*/
@@ -996,3 +1090,5 @@ body {
     border: 1px solid black;
     border-radius: 50%;
 }
+
+
