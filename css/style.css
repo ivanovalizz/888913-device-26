@@ -782,16 +782,24 @@ body {
 }
 
 .sorting-background {
-    background: linear-gradient(to right, #d9d9d9 33%, #ebebeb 33%);
+    background: linear-gradient(to right, #d9d9d9 50%, #ebebeb 50%);
 }
 
 .catalog-content-background {
-    background: linear-gradient(to right, #ebebeb 33%, transparent 33%);
+    background: linear-gradient(to right, #ebebeb 50%, #ffffff 50%);
 }
 
 .catalog-columns,
 .sorting-wrapper {
     display: flex;
+}
+
+.sorting-wrapper {
+    background: linear-gradient(to right, #d9d9d9 327px, #ebebeb 327px);
+}
+
+.catalog-columns {
+    background: linear-gradient(to right, #ebebeb 327px, #ffffff 327px);
 }
 
 .sorting-wrapper > .title {
@@ -803,7 +811,9 @@ body {
 
 .sorting-wrapper > .title,
 .filters-section {
-    width: 268px;
+    width: 327px;
+    padding-right: 67px;
+    padding-left: 60px;
 }
 
 .sorting,
@@ -966,17 +976,10 @@ body {
     background: lightpink;
 }
 
-.range-filter {
-    width: 260px;
-}
-
 .range-controls {
     position: relative;
 
-    /*margin-bottom: 15px;*/
     padding-top: 39px;
-    padding-right: 20px;
-    padding-left: 20px;
 }
 
 .range-controls .scale {
