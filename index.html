@@ -17,9 +17,9 @@
             <a class="button-search" href="#">Найти</a>
         </form>
         <div class="site-navigation">
-            <a class="user-navigation" href="#"><span>Иконка пользователя</span>Войти</a>
-            <a class="user-navigation" href="#"><span>Иконка сравнения</span>Сравнить</a>
-            <a class="user-navigation" href="#"><span>Иконка корзины</span>Корзина</a>
+            <a class="user-navigation login" href="#">Войти</a>
+            <a class="user-navigation compare" href="#">Сравнить</a>
+            <a class="user-navigation cart" href="#">Корзина</a>
         </div>
     </div>
     <nav class="main-navigation">
@@ -42,7 +42,7 @@
 </header>
 <main class="main-content">
     <h1 class="visually-hidden">Device</h1>
-    <section class="popular-goods container slider">
+    <section class="container slider">
         <h2 class="visually-hidden">Популярные товары</h2>
         <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
         <input class="visually-hidden" type="radio" id="product-2" name="toggle">
@@ -52,13 +52,13 @@
             <label class="slider-controls-item slider-controls-item--2" for="product-2">Второй</label>
             <label class="slider-controls-item slider-controls-item--3" for="product-3">Третий</label>
         </div>
-        <ul class="popular-list slider-list">
+        <ul class="slider-list">
             <li class="slider-item">
                 <h3 class="visually-hidden">Палка для селфи</h3>
-                <div class="popular-columns image">
+                <div class="slider-columns image">
                     <img src="img/slider-1.png" alt="Палка для селфи" width="384" height="486">
                 </div>
-                <div class="popular-columns content">
+                <div class="slider-columns content">
                     <p class="tagline">Делай селфи, как Бен Стиллер!</p>
                     <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом
                         всего 5 килограмм.</p>
@@ -79,10 +79,10 @@
             </li>
             <li class="slider-item">
                 <h3 class="visually-hidden">Фитнес-браслет</h3>
-                <div class="popular-columns image">
+                <div class="slider-columns image">
                     <img src="img/slider-2.png" alt="Фитнес-браслет" width="345" height="485">
                 </div>
-                <div class="popular-columns content">
+                <div class="slider-columns content">
                     <p class="tagline">Худеем правильно!</p>
                     <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
                     <a class="button" href="#">Подробнее</a>
@@ -98,10 +98,10 @@
             </li>
             <li class="slider-item">
                 <h3 class="visually-hidden">Квадрокоптер</h3>
-                <div class="popular-columns image">
+                <div class="slider-columns image">
                     <img src="img/slider-3.png" alt="Квадрокоптер" width="518" height="334">
                 </div>
-                <div class="popular-columns content">
+                <div class="slider-columns content">
                     <p class="tagline">Порхает как бабочка, жалит как пчела!</p>
                     <p>Этот обычный, на первый взгляд, квадрокоптероснащен мощным лазером, замаскированным под стандартную
                         камеру.</p>
@@ -261,7 +261,7 @@
         </div>
     </div>
 </footer>
-<!--
+
 <section class="popup-form">
     <h2 class="visually-hidden">
         Форма обратной связи
@@ -279,10 +279,12 @@
             <label for="user-message">Текст письма:</label>
             <textarea name="message" id="user-message" placeholder="В свободной форме" rows="10" cols="50"></textarea>
         </p>
-        <button type="submit">Отправить</button>
+        <button class="button-clear button" type="submit">Отправить</button>
     </form>
     <button type="button">Закрыть</button>
 </section>
+
+<!--
 <section class="popup-map">
     <h2 class="visually-hidden">
         Как до нас добраться
