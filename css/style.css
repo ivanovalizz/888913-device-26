@@ -83,9 +83,9 @@ body {
 
 .main-header {
     margin-top: 40px;
-    padding: 0 60px;
+    padding: 50px 60px;
 
-    background-color: rgba(240, 197, 46, 0.5);
+    background-color: #f7e296;
 }
 
 .main-header a {
@@ -94,7 +94,7 @@ body {
 
 .main-header-logo {
     display: inline-block;
-    transform: translateY(-19px);
+    transform: translateY(-69px);
 }
 
 .search-form,
@@ -184,7 +184,6 @@ body {
 
 .navigation-list {
     display: flex;
-    /*justify-content: space-between;*/
 
     padding: 0;
     padding-top: 50px;
@@ -236,33 +235,39 @@ body {
 }
 
 .dropdown-list {
-    visibility: hidden;
+    display: none;
     position: absolute;
-    display: flex;
+    top: 24px;
+    left: -60px;
 
-    padding: 40px 0 42px;
+    padding: 30px 60px;
     margin: 0;
+    width: 1160px;
 
     z-index: 10;
 
-    /*background-color: rgba(240, 197, 46, 0.5);*/
+    background-color: #f7e296;
 }
 
 .menu-catalog:hover .dropdown-list,
 .menu-catalog:focus .dropdown-list {
-    visibility: visible;
-    /*position: relative;*/
-
+    display: flex;
 }
 
 .dropdown-list .col-1 {
     min-width: 182px;
     margin-right: 58px;
+    padding: 0;
 }
 
 .dropdown-list .col-2 {
     min-width: 126px;
     margin-right: 77px;
+    padding: 0;
+}
+
+.dropdown-list .col-3 {
+    padding: 0;
 }
 
 .dropdown-item {
@@ -419,11 +424,25 @@ body {
 .brand-list li {
     list-style: none;
 }
-/*
-.main-content {
-    margin-top: -111px;
+
+.main-content .slider {
+    position: relative;
 }
-*/
+
+.main-content .slider::before {
+    content: '';
+    position: absolute;
+    width: 1160px;
+    height: 110px;
+
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+
+    background-color: #f7e296;
+}
+
 /*--- Основной слайдер с популярными товарами главной страницы ---*/
 
 .slider-list {
