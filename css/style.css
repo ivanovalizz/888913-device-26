@@ -101,11 +101,12 @@ body {
 .site-navigation {
     width: 50%;
 }
+
 /*--------*/
 
 .site-navigation {
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     padding-left: 20px;
 }
 
@@ -116,15 +117,36 @@ body {
     padding-left: 26px;
 }
 
-.site-navigation .compare {
-    /*margin-left: 212px;*/
+.site-navigation .login {
+    padding-right: 218px;
 }
 
 .site-navigation .cart {
-    /*margin-left: 39px;*/
+    margin-left: auto;
+}
+
+.site-navigation .user {
+    padding-right: 20px;
+}
+
+.site-navigation .button-exit {
+    padding: 0;
+    padding-right: 65px;
 }
 
 .site-navigation .login::before {
+    position: absolute;
+    top: 9px;
+    left: 2px;
+
+    width: 13px;
+    height: 13px;
+
+    content: '';
+    background: url("../img/user.svg") no-repeat;
+}
+
+.site-navigation .user::before {
     position: absolute;
     top: 9px;
     left: 2px;
@@ -160,12 +182,22 @@ body {
     background: url("../img/cart.svg") no-repeat;
 }
 
-/*--------*/
+.navigation-list {
+    display: flex;
+    /*justify-content: space-between;*/
+
+    padding: 0;
+    padding-top: 50px;
+    margin: 0;
+}
+
 .navigation-list li {
     list-style: none;
 }
 
 .navigation-item {
+    display: block;
+
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
@@ -175,13 +207,62 @@ body {
     color: #000000;
 }
 
+.navigation-list .menu-catalog {
+    position: relative;
+    width: 50%;
+}
+
+.menu-catalog::after {
+    position: absolute;
+    top: 4px;
+    right: 274px;
+
+    width: 16px;
+    height: 16px;
+
+    background: url("../img/plus.svg") no-repeat 0 0;
+    opacity: 0.5;
+
+    content: "";
+}
+
+.navigation-list .delivery {
+    padding-left: 20px;
+    margin-right: 38px;
+}
+
+.navigation-list .contacts {
+    margin-left: auto;
+}
+
 .dropdown-list {
-    display: none;
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+
+    padding: 40px 0 42px;
+    margin: 0;
+
+    z-index: 10;
+
+    /*background-color: rgba(240, 197, 46, 0.5);*/
 }
 
 .menu-catalog:hover .dropdown-list,
 .menu-catalog:focus .dropdown-list {
-    display: block;
+    visibility: visible;
+    /*position: relative;*/
+
+}
+
+.dropdown-list .col-1 {
+    min-width: 182px;
+    margin-right: 58px;
+}
+
+.dropdown-list .col-2 {
+    min-width: 126px;
+    margin-right: 77px;
 }
 
 .dropdown-item {
@@ -200,13 +281,6 @@ body {
 
 .user-navigation {
     color: #000000;
-}
-
-.navigation-list {
-    display: flex;
-
-    padding: 0;
-    margin: 0;
 }
 
 .main-header a:hover,
@@ -345,15 +419,11 @@ body {
 .brand-list li {
     list-style: none;
 }
-
-.partners-list {
-    font-family: "Gilroy", Arial, sans-serif;
-    font-size: 16px;
-    line-height: 40px;
-    font-weight: 800;
-    color: #000000;
+/*
+.main-content {
+    margin-top: -111px;
 }
-
+*/
 /*--- Основной слайдер с популярными товарами главной страницы ---*/
 
 .slider-list {
@@ -492,7 +562,6 @@ body {
 /*--- Иконки с переходами в каталог по категории товаров главной страницы ---*/
 
 .visual-navigation {
-
     padding-top: 106px;
     padding-bottom: 84px;
 }
@@ -506,7 +575,6 @@ body {
 }
 
 .catalog-index li {
-    /*margin: 0;*/
     margin-right: 40px;
 }
 
@@ -515,20 +583,89 @@ body {
 }
 
 .catalog-index a {
-    /*vremenno*/
+    position: relative;
     display: block;
+    padding-top: 200px;
     width: 160px;
-    height: 160px;
-    background-color: lightpink;
-}
 
-.catalog-index a {
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
     font-weight: 800;
     color: #000000;
     text-decoration: none;
+}
+
+.catalog-index .vr::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: 160px;
+    height: 160px;
+
+    background: rgba(240, 197, 46, 0.5) url("../img/popular-1.svg") no-repeat center center;
+}
+
+.catalog-index .monopods::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: 160px;
+    height: 160px;
+
+    background: rgba(240, 197, 46, 0.5) url("../img/popular-2.svg") no-repeat center 100%;
+}
+
+.catalog-index .action-cam::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: 160px;
+    height: 160px;
+
+    background: rgba(240, 197, 46, 0.5) url("../img/popular-3.svg") no-repeat center center;
+}
+
+.catalog-index .fitness::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: 160px;
+    height: 160px;
+
+    background: rgba(240, 197, 46, 0.5) url("../img/popular-4.svg") no-repeat center center;
+}
+
+.catalog-index .watches::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: 160px;
+    height: 160px;
+
+    background: rgba(240, 197, 46, 0.5) url("../img/popular-5.svg") no-repeat center center;
+}
+
+.catalog-index .quadrocopter::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: 160px;
+    height: 160px;
+
+    background: rgba(240, 197, 46, 0.5) url("../img/popular-6.svg") no-repeat center center;
 }
 
 .catalog-index a:active {
@@ -549,6 +686,8 @@ body {
 }
 
 .main-advantages {
+    width: 100%;
+
     background-image: linear-gradient(180deg, transparent 100px, #e5e5e5 100px);
 }
 
@@ -615,6 +754,14 @@ body {
 }
 
 /*--- Блок с секциями О нас и Контакты Главной страницы ---*/
+
+.partners-list {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 800;
+    color: #000000;
+}
 
 .about {
     display: flex;
@@ -733,7 +880,7 @@ body {
 }
 
 h2.title {
-  font-family: "Gilroy", Arial, sans-serif;
+    font-family: "Gilroy", Arial, sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 800;
@@ -908,10 +1055,14 @@ h2.title {
 }
 
 .sorting-background {
+    width: 100%;
+
     background: linear-gradient(to right, #d9d9d9 50%, #ebebeb 50%);
 }
 
 .catalog-content-background {
+    width: 100%;
+
     background: linear-gradient(to right, #ebebeb 50%, #ffffff 50%);
 }
 
@@ -1063,7 +1214,7 @@ h2.title {
     text-decoration: none;
 }
 
-.pagination-list a  {
+.pagination-list a {
     color: rgba(0, 0, 0, 0.3);
 }
 
@@ -1106,6 +1257,7 @@ h2.title {
 
 .main-footer {
     padding-top: 65px;
+    width: 100%;
 
     color: #ffffff;
 
@@ -1206,6 +1358,8 @@ h2.title {
 /* --- Pop-up feedback --- */
 
 .popup-form {
+    position: fixed;
+    margin: auto;
     padding: 98px 100px 78px;
     width: 960px;
     height: 556px;
