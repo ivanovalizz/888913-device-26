@@ -182,6 +182,24 @@ body {
     background: url("../img/cart.svg") no-repeat;
 }
 
+.site-navigation .login:hover::before,
+.site-navigation .login:focus::before,
+.site-navigation .user:hover::before,
+.site-navigation .user:focus::before,
+.site-navigation .compare:hover::before,
+.site-navigation .compare:focus::before,
+.site-navigation .cart:hover::before,
+.site-navigation .cart:focus::before {
+    opacity: 0.6;
+}
+
+.site-navigation .login:active::before,
+.site-navigation .user:active::before,
+.site-navigation .compare:active::before,
+.site-navigation .cart:active::before {
+    opacity: 0.3;
+}
+
 .navigation-list {
     display: flex;
 
@@ -317,32 +335,63 @@ body {
 }
 
 .search-form input {
-    margin-left: 37px;
+    padding: 16px 104px 16px 37px;
 
     color: rgba(0, 0, 0, 0.3);
+
     border: none;
+
     background-color: transparent;
 }
 
-.search-form a {
+.search-form input::before {
     position: absolute;
-    display: block;
-    top: 6px;
-    left: 3px;
-
-    width: 16px;
-    height: 16px;
-    font-size: 0;
-}
-
-.search-form a::before {
-    position: absolute;
+    top: 15px;
+    left: 4px;
     width: 16px;
     height: 16px;
 
     background: url("../img/search.svg") no-repeat center center;
 
     content: '';
+}
+
+.search-form input:focus,
+.search-form input:active {
+    border-bottom: 2px solid #000000;
+}
+
+.search-form a {
+    display: none;
+
+    padding: 10px 21px;
+    margin: -4px;
+
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.15px;
+
+    border: 2px solid #000000;
+}
+
+.search-form input:focus + .button-search,
+.search-form input:active + .button-search{
+    display: inline-block;
+}
+
+.main-header .button-search:hover,
+.main-header .button-search:focus,
+.main-header .button-search:active {
+    background: #000000;
+}
+
+.main-header .button-search:hover,
+.main-header .button-search:focus {
+    color: #ffffff;
+}
+
+.button-search:active {
+    color: rgba(255, 255, 255, 0.3);
 }
 
 /* --- Сброс стилей у button --- */
@@ -627,23 +676,21 @@ body {
     width: 15px;
     height: 15px;
     padding: 10px;
-    /*margin-left: 20px;*/
 
-    /*border-radius: 50%;*/
     cursor: pointer;
-    /*border: 1px solid black;*/
+
     background: url("../img/slider-button-empty.svg") no-repeat center center;
 }
 
-#product-1:checked ~ .slider-list .slider-item:nth-child(1) {
+.product-1:checked ~ .slider-list .slider-item:nth-child(1) {
     display: flex;
 }
 
-#product-2:checked ~ .slider-list .slider-item:nth-child(2) {
+.product-2:checked ~ .slider-list .slider-item:nth-child(2) {
     display: flex;
 }
 
-#product-3:checked ~ .slider-list .slider-item:nth-child(3) {
+.product-3:checked ~ .slider-list .slider-item:nth-child(3) {
     display: flex;
 }
 /*
@@ -1017,6 +1064,28 @@ body {
     margin-right: 0;
 }
 
+.brand-list .item-dji {
+    background: url("../img/logo-1-color.png");
+}
+
+.brand-list .item-spgadgets {
+    background: url("../img/logo-2-color.png");
+}
+
+.brand-list .item-gopro {
+    background: url("../img/logo-3-color.png");
+}
+
+.brand-list .item-vive {
+    background: url("../img/logo-4-color.png");
+}
+
+.brand-list .brand-item:hover,
+.brand-list .brand-item:focus,
+.brand-list .brand-item:active {
+    opacity: 0;
+}
+
 /*--- Блок с секциями О нас и Контакты Главной страницы ---*/
 
 .about {
@@ -1303,6 +1372,7 @@ h2.title {
     background: url("../img/icon-up-dir.svg") no-repeat center center;
     color: transparent;
     background-size: 10px 11px;
+    opacity: 0.2;
 }
 
 .sorting-direction .down {
@@ -1310,6 +1380,7 @@ h2.title {
     background: url("../img/icon-down-dir.svg") no-repeat center center;
     color: transparent;
     background-size: 10px 11px;
+    opacity: 0.2;
 }
 
 .sorting .title {
@@ -1335,6 +1406,19 @@ h2.title {
 .sorting-type .active:focus,
 .sorting-type .active:active {
     color: rgba(0, 0, 0, 1);
+}
+
+.sorting-direction a:hover,
+.sorting-direction a:focus {
+    opacity: 0.4;
+}
+
+.sorting-direction a:active,
+.sorting-direction .active,
+.sorting-direction .active:hover,
+.sorting-direction .active:focus,
+.sorting-direction .active:active {
+    opacity: 1;
 }
 
 /*--- Список товаров страницы Каталог ---*/
@@ -1568,11 +1652,12 @@ h2.title {
 /* --- Footer --- */
 
 .footer-action span {
-    display: none; /*vremenno*/
+    display: none;
 }
 
 .main-footer {
     padding-top: 65px;
+    padding-bottom: 60px;
     width: 100%;
 
     color: #ffffff;
@@ -1580,17 +1665,109 @@ h2.title {
     background-color: #464646;
 }
 
+.main-footer .container {
+    position: relative;
+}
+
+.main-footer .container::before {
+    position: absolute;
+    top: 200px;
+    left: 0;
+
+    width: 80px;
+    height: 7px;
+
+    background-color: #ffc600;
+
+    content: "";
+}
+
 .main-footer .footer-row {
     display: flex;
     justify-content: space-between;
 }
 
+.footer-row:first-child {
+    margin-bottom: 30px;
+}
+
+.footer-row:last-child {
+    margin-top: 55px;
+    margin-bottom: 0;
+}
+
 .footer-actions {
     display: flex;
+
+    margin: 0;
 
     color: rgba(255, 255, 255, 0.7);
     line-height: 36px;
     letter-spacing: 0.15px;
+}
+
+.footer-action {
+    position: relative;
+}
+
+.footer-actions li {
+    margin-left: 65px;
+}
+
+.footer-action.button-exit {
+    margin-left: 20px;
+}
+
+.footer-action.login::before {
+    position: absolute;
+    top: 6px;
+    left: -26px;
+
+    width: 13px;
+    height: 13px;
+
+    background: url("../img/user.svg");
+
+    content: '';
+}
+
+.footer-action.user::before {
+    position: absolute;
+    top: 6px;
+    left: -26px;
+
+    width: 13px;
+    height: 13px;
+
+    background: url("../img/user.svg");
+
+    content: '';
+}
+
+.footer-action.compare::before {
+    position: absolute;
+    top: 8px;
+    left: -26px;
+
+    width: 11px;
+    height: 11px;
+
+    background: url("../img/compare.svg");
+
+    content: '';
+}
+
+.footer-action.cart::before {
+    position: absolute;
+    top: 6px;
+    left: -26px;
+
+    width: 13px;
+    height: 13px;
+
+    background: url("../img/cart.svg");
+
+    content: '';
 }
 
 .footer-advantages a,
@@ -1608,6 +1785,7 @@ h2.title {
 
 .footer-advantages {
     display: flex;
+    justify-content: space-between;
 
     padding: 0;
 
@@ -1616,6 +1794,7 @@ h2.title {
     line-height: 24px;
     font-weight: 800;
     letter-spacing: 3.6px;
+    text-transform: uppercase;
     color: #ffffff;
 }
 
@@ -1673,6 +1852,15 @@ h2.title {
     background-color: #464646;
 }
 
+.social-button:hover,
+.social-button:focus {
+    opacity: 0.6;
+}
+
+.social-button:active {
+    opacity: 0.1;
+}
+
 /*--- Поведение логотипа при наведении ---*/
 
 .logo:hover,
@@ -1684,6 +1872,24 @@ h2.title {
 
 .logo:active,
 .logo-academy:active {
+    opacity: 0.3;
+}
+
+.footer-logo svg {
+    width: 163px;
+    height: 35px;
+}
+
+.footer-logo path {
+    fill: #ffc600;
+}
+
+.footer-logo:hover path,
+.footer-logo:focus path {
+    opacity: 0.6;
+}
+
+.footer-logo:active path {
     opacity: 0.3;
 }
 
