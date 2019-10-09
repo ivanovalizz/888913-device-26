@@ -113,14 +113,16 @@ body {
 }
 
 .site-navigation a {
-    display: block;
+    display: inline-block;
     position: relative;
 
     padding-left: 26px;
 }
 
-.site-navigation .login {
-    padding-right: 218px;
+.site-navigation .login,
+.site-navigation .login-wrapper {
+    width: 57%;
+    /*padding-right: 218px;*/
 }
 
 .site-navigation .cart {
@@ -133,7 +135,7 @@ body {
 
 .site-navigation .button-exit {
     padding: 0;
-    padding-right: 65px;
+    /*padding-right: 65px;*/
 }
 
 .site-navigation .login::before {
@@ -346,18 +348,6 @@ body {
 
     background: transparent url("../img/search.svg") no-repeat 4px 15px;
 }
-/*
-.search-form input::before {
-    position: absolute;
-    top: 15px;
-    left: 4px;
-    width: 16px;
-    height: 16px;
-
-    background: url("../img/search.svg") no-repeat center center;
-
-    content: '';
-}*/
 
 .search-form input:focus,
 .search-form input:active {
@@ -754,7 +744,7 @@ body {
     text-decoration: none;
 }
 
-.catalog-index .vr::before {
+.catalog-index-item::before {
     position: absolute;
     content: "";
     top: 0;
@@ -764,215 +754,57 @@ body {
     height: 160px;
 
     background: #f7e296;
+}
+
+.catalog-index-item::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: 160px;
+    height: 160px;
 }
 
 .catalog-index .vr::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-
-    width: 160px;
-    height: 160px;
-
     background: url("../img/popular-1.svg") no-repeat center center;
 }
 
-/*---поведение---*/
-.catalog-index .vr:hover::before,
-.catalog-index .vr:focus::before,
-.catalog-index .vr:active::before {
-    background: #f0c52e;
-}
-/*---*/
-
-.catalog-index .vr:active::after {
-    opacity: 0.5;
-}
-
-.catalog-index .monopods::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-
-    width: 160px;
-    height: 160px;
-
-    background: #f7e296;
-}
-
 .catalog-index .monopods::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-
-    width: 160px;
-    height: 160px;
-
     background: url("../img/popular-2.svg") no-repeat center 100%;
 }
 
-/*---поведение---*/
-.catalog-index .monopods:hover::before,
-.catalog-index .monopods:focus::before,
-.catalog-index .monopods:active::before{
-    background: #f0c52e;
-}
-
-.catalog-index .monopods:active::after{
-    opacity: 0.5;
-}
-/*---*/
-
-.catalog-index .action-cam::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-
-    width: 160px;
-    height: 160px;
-
-    background: #f7e296;
-}
-
 .catalog-index .action-cam::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-
-    width: 160px;
-    height: 160px;
-
     background: url("../img/popular-3.svg") no-repeat 49px 38px;
 }
 
-/*---поведение---*/
-.catalog-index .action-cam:hover::before,
-.catalog-index .action-cam:focus::before,
-.catalog-index .action-cam:active::before{
-    background: #f0c52e;
-}
-
-.catalog-index .action-cam:active::after {
-    opacity: 0.5;
-}
-/*---*/
-
-.catalog-index .fitness::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-
-    width: 160px;
-    height: 160px;
-
-    background: #f7e296;
-}
-
 .catalog-index .fitness::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-
-    width: 160px;
-    height: 160px;
-
     background: url("../img/popular-4.svg") no-repeat 28px 50px;
 }
 
-/*---поведение---*/
-.catalog-index .fitness:hover::before,
-.catalog-index .fitness:focus::before,
-.catalog-index .fitness:active::before{
-    background: #f0c52e;
-}
-
-.catalog-index .fitness:active::after {
-    opacity: 0.5;
-}
-/*---*/
-
-.catalog-index .watches::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-
-    width: 160px;
-    height: 160px;
-
-    background: #f7e296;
-}
-
 .catalog-index .watches::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-
-    width: 160px;
-    height: 160px;
-
     background: url("../img/popular-5.svg") no-repeat 55px center;
 }
 
-/*---поведение---*/
-.catalog-index .watches:hover::before,
-.catalog-index .watches:focus::before,
-.catalog-index .watches:active::before{
-    background: #f0c52e;
-}
-
-.catalog-index .watches:active::after {
-    opacity: 0.5;
-}
-/*---*/
-
-.catalog-index .quadrocopter::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-
-    width: 160px;
-    height: 160px;
-
-    background: #f7e296;
-}
-
 .catalog-index .quadrocopter::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-
-    width: 160px;
-    height: 160px;
-
     background: url("../img/popular-6.svg") no-repeat center 49px;
 }
 
 /*---поведение---*/
-.catalog-index .quadrocopter:hover::before,
-.catalog-index .quadrocopter:focus::before,
-.catalog-index .quadrocopter:active::before{
+.catalog-index-item:hover::before,
+.catalog-index-item:focus::before,
+.catalog-index-item:active::before {
     background: #f0c52e;
 }
 
-.catalog-index .quadrocopter:active::after {
+.catalog-index-item:active::after {
     opacity: 0.5;
 }
-/*---*/
 
 .catalog-index a:active {
     color: rgba(0, 0, 0, 0.3);
 }
+/*---*/
 
 /*--- Слайдер с преимуществами главной страницы ---*/
 
@@ -1265,7 +1097,7 @@ body {
     color: #000000;
 }
 
-h2.title {
+.title {
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 16px;
     line-height: 24px;
@@ -1493,7 +1325,7 @@ h2.title {
 }
 
 .catalog-section {
-    padding-bottom: 77px;
+    padding: 69px 0 77px 73px;
 }
 
 .catalog-list {
@@ -1501,7 +1333,8 @@ h2.title {
     flex-wrap: wrap;
 
     margin: 0;
-    padding: 69px 0 41px 73px;
+    padding: 0;
+    padding-bottom: 41px;
 }
 
 .catalog-item {
@@ -1509,7 +1342,6 @@ h2.title {
     padding: 0;
     margin-right: 40px;
 
-    position: relative;
     display: inline-block;
     width: 360px;
 
@@ -1522,13 +1354,17 @@ h2.title {
 
 .catalog-item .item-actions {
     position: absolute;
-    display: none;
     top: 0;
     left: 0;
-    padding: 170px 80px 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    padding-top: 30px;
 
-    width: 360px;
-    height: 380px;
+    width: 100%;
+    height: 100%;
 
     background-color: rgba(238, 238, 238, 0.7);
     z-index: 10;
@@ -1536,10 +1372,11 @@ h2.title {
 
 .catalog-item:hover .item-actions,
 .catalog-item:focus .item-actions {
-    display: block;
+    display: flex;
 }
 
 .catalog-item .image {
+    position: relative;
     width: 360px;
     height: 380px;
 }
@@ -1549,6 +1386,7 @@ h2.title {
 }
 
 .comparison { /*Добавить к сравнению*/
+    margin-top: 10px;
     font: inherit;
     font-size: 13px;
     line-height: 20px;
@@ -2057,14 +1895,12 @@ h2.title {
     font-size: 0;
 
     opacity: 0.5;
-    transition: transform 0.5s ease;
 
     background: url("../img/modal-close.svg") no-repeat center center;
 }
 
 .button-close:hover,
 .button-close:focus {
-    transform: rotate(45deg);
     opacity: 1;
 }
 
