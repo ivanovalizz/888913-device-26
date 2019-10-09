@@ -38,6 +38,8 @@ body {
     margin: 0;
     padding: 0;
 
+    min-width: 1160px;
+
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 15px;
     font-weight: 300;
@@ -204,7 +206,7 @@ body {
     display: flex;
 
     padding: 0;
-    padding-top: 37px;
+    padding-top: 25px;
     margin: 0;
 }
 
@@ -331,7 +333,8 @@ body {
 /* --- Search form Header --- */
 
 .search-form {
-    position: relative;
+    /*position: relative;*/
+    margin-top: -12px;
 }
 
 .search-form input {
@@ -339,11 +342,11 @@ body {
 
     color: rgba(0, 0, 0, 0.3);
 
-    border: none;
+    border: 2px solid transparent;
 
-    background-color: transparent;
+    background: transparent url("../img/search.svg") no-repeat 4px 15px;
 }
-
+/*
 .search-form input::before {
     position: absolute;
     top: 15px;
@@ -354,7 +357,7 @@ body {
     background: url("../img/search.svg") no-repeat center center;
 
     content: '';
-}
+}*/
 
 .search-form input:focus,
 .search-form input:active {
@@ -367,6 +370,8 @@ body {
     padding: 10px 21px;
     margin: -4px;
 
+    color: #000000;
+
     font-size: 15px;
     line-height: 30px;
     letter-spacing: 0.15px;
@@ -375,7 +380,7 @@ body {
 }
 
 .search-form input:focus + .button-search,
-.search-form input:active + .button-search{
+.search-form input:active + .button-search {
     display: inline-block;
 }
 
@@ -881,7 +886,6 @@ body {
     background: url("../img/popular-4.svg") no-repeat 28px 50px;
 }
 
-
 /*---поведение---*/
 .catalog-index .fitness:hover::before,
 .catalog-index .fitness:focus::before,
@@ -1064,25 +1068,33 @@ body {
     margin-right: 0;
 }
 
-.brand-list .item-dji {
+.brand-list .item-dji:hover,
+.brand-list .item-dji:focus,
+.brand-list .item-dji:active{
     background: url("../img/logo-1-color.png");
 }
 
-.brand-list .item-spgadgets {
+.brand-list .item-spgadgets:hover,
+.brand-list .item-spgadgets:focus,
+.brand-list .item-spgadgets:active {
     background: url("../img/logo-2-color.png");
 }
 
-.brand-list .item-gopro {
+.brand-list .item-gopro:hover,
+.brand-list .item-gopro:focus,
+.brand-list .item-gopro:active {
     background: url("../img/logo-3-color.png");
 }
 
-.brand-list .item-vive {
+.brand-list .item-vive:hover,
+.brand-list .item-vive:focus,
+.brand-list .item-vive:active {
     background: url("../img/logo-4-color.png");
 }
 
-.brand-list .brand-item:hover,
-.brand-list .brand-item:focus,
-.brand-list .brand-item:active {
+.brand-item:hover img,
+.brand-item:focus img,
+.brand-item:active img {
     opacity: 0;
 }
 
@@ -1557,7 +1569,6 @@ h2.title {
 .item-info {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
 }
 
 .item-name {
@@ -1566,6 +1577,24 @@ h2.title {
 
     text-align: left;
 }
+
+/*---Подгонка ширины названий карточек товаров---*/
+.catalog-item .item-name:nth-child(1) {
+    max-width: 248px;
+}
+
+.catalog-item .item-name:nth-child(2) {
+    max-width: 175px;
+}
+
+.catalog-item .item-name:nth-child(3) {
+    max-width: 253px;
+}
+
+.catalog-item .item-name:nth-child(4) {
+    max-width: 227px;
+}
+/*---*/
 
 .item-info .price {
     margin: 0;
@@ -1720,59 +1749,85 @@ h2.title {
 
 .footer-action.login::before {
     position: absolute;
-    top: 6px;
+    top: 4px;
     left: -26px;
 
     width: 13px;
     height: 13px;
 
-    background: url("../img/user.svg");
+    background: url("../img/user-yellow.svg") no-repeat center center;
 
     content: '';
 }
 
 .footer-action.user::before {
     position: absolute;
-    top: 6px;
+    top: 4px;
     left: -26px;
 
     width: 13px;
     height: 13px;
 
-    background: url("../img/user.svg");
+    background: url("../img/user-yellow.svg") no-repeat center center;
 
     content: '';
 }
 
 .footer-action.compare::before {
     position: absolute;
-    top: 8px;
+    top: 6px;
     left: -26px;
 
     width: 11px;
     height: 11px;
 
-    background: url("../img/compare.svg");
+    background: url("../img/compare-yellow.svg") no-repeat center center;
 
     content: '';
 }
 
 .footer-action.cart::before {
     position: absolute;
-    top: 6px;
+    top: 4px;
     left: -26px;
 
     width: 13px;
     height: 13px;
 
-    background: url("../img/cart.svg");
+    background: url("../img/cart-yellow.svg") no-repeat center center;
 
     content: '';
 }
 
+.footer-action.login:hover::before,
+.footer-action.login:focus::before,
+.footer-action.user:hover::before,
+.footer-action.user:focus::before,
+.footer-action.compare:hover::before,
+.footer-action.compare:focus::before,
+.footer-action.cart:hover::before,
+.footer-action.cart:focus::before {
+    opacity: 0.6;
+}
+
+.footer-action.login:active::before,
+.footer-action.user:active::before,
+.footer-action.compare:active::before,
+.footer-action.cart:active::before {
+    opacity: 0.3;
+}
+
+.footer-row:nth-child(2) p {
+    width: 210px;
+}
+
+.footer-row .phone-number {
+    text-align: right;
+}
+
 .footer-advantages a,
 .footer-action,
-.phone-number {
+.phone-number a {
     text-decoration: none;
     color: inherit;
 }
@@ -1833,12 +1888,16 @@ h2.title {
 .social {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 155px;
-    margin: 0 auto;
+    justify-content: center;
+    width: 100%;
+    margin: 0 0 0 26px;
     padding: 0;
 
     list-style: none;
+}
+
+.social li {
+    margin: 0 11px;
 }
 
 .social-button {
@@ -1893,16 +1952,10 @@ h2.title {
     opacity: 0.3;
 }
 
-/* --- Pop-up map---*/
-
-.popup-map {
-    display: none;
-}
-
 /* --- Pop-up feedback --- */
 
 .popup-form {
-    position: fixed;
+    position: relative;
     margin: auto;
     padding: 98px 100px 78px;
     width: 960px;
@@ -1944,6 +1997,9 @@ h2.title {
     padding-bottom: 20px;
     padding-left: 20px;
     margin-top: 10px;
+    border: 3px solid transparent;
+
+    background: #f2f2f2;
 }
 
 .popup-form textarea {
@@ -1951,10 +2007,67 @@ h2.title {
     padding-top: 18px;
     padding-left: 20px;
     margin-top: 10px;
+
+    background: #f2f2f2;
+    border: 3px solid transparent;
 }
 
 .popup .button-close {
     position: absolute;
 
     background: url("../img/modal-close.svg")
+}
+
+.popup-form input:hover,
+.popup-form textarea:hover {
+    background: #eaeaea;
+}
+
+.popup-form input:focus,
+.popup-form textarea:focus {
+    background: #ffffff;
+    border: 3px solid #f0c52e;
+}
+
+.popup-form input:required,
+.popup-form textarea:required {
+    background: #f6dada;
+}
+
+/*--- Pop-up Map ---*/
+
+.popup-map {
+    position: relative;
+    margin: 0 auto;
+    width: 960px;
+    height: 559px;
+
+    box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
+
+    background: url("../img/map.jpg") no-repeat;
+}
+
+.button-close {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+
+    width: 55px;
+    height: 55px;
+    font-size: 0;
+
+    opacity: 0.5;
+    transition: transform 0.5s ease;
+
+    background: url("../img/modal-close.svg") no-repeat center center;
+}
+
+.button-close:hover,
+.button-close:focus {
+    transform: rotate(45deg);
+    opacity: 1;
+}
+
+.button-close:active {
+    opacity: 0.3;
 }

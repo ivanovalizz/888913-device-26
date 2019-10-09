@@ -255,7 +255,7 @@
                 <li><a href="#">Гарантия</a></li>
                 <li><a href="#">Контакты</a></li>
             </ul>
-            <p>Тел.: <a class="phone-number" href="tel:+74954959595">+7(495)495-95-95</a></p>
+            <p class="phone-number">Тел.: <a href="tel:+74954959595">+7 (495) 495-95-95</a></p>
         </div>
         <div class="footer-row">
             <ul class="social">
@@ -291,7 +291,7 @@
         </p>
         <p>
             <label for="user-email">Ваш e-mail:</label>
-            <input type="email" name="email" id="user-email" placeholder="email@example.com">
+            <input type="email" name="email" id="user-email" placeholder="email@example.com" required>
         </p>
         <p>
             <label for="user-message">Текст письма:</label>
@@ -299,19 +299,18 @@
         </p>
         <button class="button-clear button" type="submit">Отправить</button>
     </form>
-    <button type="button-close">Закрыть</button>
+    <button class="button-clear button-close" type="button">Закрыть</button>
 </section>
 
-<!--
 <section class="popup-map">
     <h2 class="visually-hidden">
         Как до нас добраться
     </h2>
     <p>
-        <img src="img/map.jpg" alt="Офис компании по адресу ул. Строителей 15, Москва" width="960" height="559">
+        <!--<img src="img/map.jpg" alt="Офис компании по адресу ул. Строителей 15, Москва" width="960" height="559">-->
     </p>
-    <button type="button">Закрыть</button>
+    <button class="button-clear button-close" type="button">Закрыть</button>
 </section>
--->
+
 </body>
 </html>
