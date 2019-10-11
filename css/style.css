@@ -112,7 +112,7 @@ body {
 
 .site-navigation a {
     display: inline-block;
-    vertical-align: center;
+    vertical-align: middle;
     position: relative;
 
     padding-left: 26px;
@@ -372,7 +372,7 @@ body {
 .search-form input:focus + .button-search,
 .search-form input:active + .button-search {
     display: inline-block;
-    vertical-align: center;
+    vertical-align: middle;
 }
 
 .main-header .button-search:hover,
@@ -509,38 +509,49 @@ body {
     display: none;
 }
 
+.slider-item.slider-2 {
+    margin-bottom: -10px;
+}
+
+.slider-item.slider-3 {
+    padding-top: 32px;
+    margin-bottom: 11px;
+}
+
 .slider-columns {
     width: 50%;
 }
 
-.slider-monopods .slider-image {
+.slider-1 .slider-image {
     padding-right: 106px;
     padding-left: 90px;
 }
 
-.slider-monopods .slider-content {
+.slider-1 .slider-content {
     padding-right: 82px;
     padding-left: 20px;
 }
 
-.slider-fitness .slider-image {
-    padding-right: 125px;
-    padding-left: 103px;
+.slider-2 .slider-image {
+    padding-top: 12px;
+    padding-right: 112px;
+    padding-left: 116px;
 }
 
-.slider-fitness .slider-content {
+.slider-2 .slider-content {
+    padding-top: 9px;
     padding-right: 82px;
-    padding-left: 13px;
+    padding-left: 19px;
 }
 
-.slider-quadrocopter .slider-image {
-    padding-top: 22px;
-    padding-left: 60px;
+.slider-3 .slider-image {
+    padding-top: 32px;
+    padding-left: 39px;
 }
 
-.slider-quadrocopter .slider-content {
+.slider-3 .slider-content {
     padding-right: 82px;
-    padding-left: 33px;
+    padding-left: 20px;
 }
 
 .tagline {
@@ -552,25 +563,27 @@ body {
     color: #000000;
 }
 
-.slider-monopods .tagline {
+.slider-1 .tagline {
     margin-top: 80px;
     margin-bottom: 21px;
 
     max-width: 396px;
 }
 
-.slider-fitness .tagline {
+.slider-2 .tagline {
     margin-top: 70px;
-    margin-bottom: 23px;
+    margin-bottom: 19px;
 
     max-width: 260px;
 }
 
-.slider-quadrocopter .tagline {
+.slider-3 .tagline {
+    margin-bottom: 20px;
+
     min-width: 506px;
 }
 
-.slider-item.slider-monopods::after {
+.slider-item.slider-1::after {
     position: absolute;
     top: -10px;
     right: 48px;
@@ -586,9 +599,9 @@ body {
     content: '01';
 }
 
-.slider-item.slider-fitness::after {
+.slider-item.slider-2::after {
     position: absolute;
-    top: -10px;
+    top: -12px;
     right: 48px;
 
     font-family: "Gilroy", Arial, sans-serif;
@@ -602,7 +615,7 @@ body {
     content: '02';
 }
 
-.slider-item.slider-quadrocopter::after {
+.slider-item.slider-3::after {
     position: absolute;
     top: -10px;
     right: 48px;
@@ -656,8 +669,8 @@ body {
 
 .slider-controls {
     position: absolute;
-    right: 60px;
-    bottom: 159px;
+    right: 40px;
+    bottom: 161px;
     z-index: 100;
 
     width: 160px;
@@ -671,14 +684,18 @@ body {
     position: relative;
 
     display: inline-block;
-    vertical-align: center;
-    width: 15px;
-    height: 15px;
-    padding: 10px;
+    /*vertical-align: middle;*/
+    width: 12px;
+    height: 12px;
 
     cursor: pointer;
 
     background: url("../img/slider-button-empty.svg") no-repeat center center;
+    background-size: contain;
+}
+
+.slider-controls label:not(:last-child) {
+    margin-right: 21px;
 }
 
 .product-1:checked ~ .slider-list .slider-item:nth-child(1) {
@@ -692,6 +709,15 @@ body {
 .product-3:checked ~ .slider-list .slider-item:nth-child(3) {
     display: flex;
 }
+
+/* для активного слайда иконка */
+.product-1:checked ~ .slider-controls .slider-controls-item--1,
+.product-2:checked ~ .slider-controls .slider-controls-item--2,
+.product-3:checked ~ .slider-controls .slider-controls-item--3 {
+    background: url("../img/slider-button.svg") no-repeat center center;
+    background-size: contain;
+}
+
 
 /*--- Иконки с переходами в каталог по категории товаров главной страницы ---*/
 
@@ -716,7 +742,7 @@ body {
     margin-right: 0;
 }
 
-.catalog-index a {
+.catalog-index-item {
     position: relative;
     display: block;
     padding-top: 195px;
@@ -752,27 +778,27 @@ body {
     height: 160px;
 }
 
-.catalog-index .vr::after {
+.catalog-index-item.vr::after {
     background: url("../img/popular-1.svg") no-repeat center center;
 }
 
-.catalog-index .monopods::after {
+.catalog-index-item.monopods::after {
     background: url("../img/popular-2.svg") no-repeat 38px 41px;
 }
 
-.catalog-index .action-cam::after {
+.catalog-index-item.action-cam::after {
     background: url("../img/popular-3.svg") no-repeat 49px 38px;
 }
 
-.catalog-index .fitness::after {
+.catalog-index-item.fitness::after {
     background: url("../img/popular-4.svg") no-repeat 28px 50px;
 }
 
-.catalog-index .watches::after {
+.catalog-index-item.watches::after {
     background: url("../img/popular-5.svg") no-repeat 55px center;
 }
 
-.catalog-index .quadrocopter::after {
+.catalog-index-item.quadrocopter::after {
     background: url("../img/popular-6.svg") no-repeat center 49px;
 }
 
@@ -787,7 +813,7 @@ body {
     opacity: 0.5;
 }
 
-.catalog-index a:active {
+.catalog-index-item:active {
     color: rgba(0, 0, 0, 0.3);
 }
 /*---*/
@@ -838,8 +864,19 @@ body {
 }
 
 .advantages-list li:not(:first-child) {
-    display: none;
     padding: 0;
+}
+
+.advantages-list li:nth-child(1) {
+    display: none;
+}
+
+.advantages-list li:nth-child(2) {
+    display: none;
+}
+
+.advantages-list li:nth-child(3) {
+    display: block;
 }
 
 .advantages-list p {
@@ -856,6 +893,30 @@ body {
     height: 165px;
 
     background: url("../img/delivery.svg") no-repeat center center;
+    content: "";
+}
+
+.advantages-list .slider-warranty::after {
+    position: absolute;
+    bottom: 67px;
+    right: 46px;
+
+    width: 171px;
+    height: 194px;
+
+    background: url("../img/warranty.svg") no-repeat center center;
+    content: "";
+}
+
+.advantages-list .slider-credit::after {
+    position: absolute;
+    bottom: 72px;
+    right: 70px;
+
+    width: 156px;
+    height: 186px;
+
+    background: url("../img/credit.svg") no-repeat center center;
     content: "";
 }
 
@@ -919,7 +980,7 @@ body {
     display: flex;
     justify-content: space-between;
 
-    padding-bottom: 79px;
+    padding-bottom: 82px;
 }
 
 .about h2 {
@@ -937,7 +998,7 @@ body {
 .about section {
     width: 50%;
 
-    padding-top: 52px;
+    padding-top: 50px;
 }
 
 .about p {
@@ -968,7 +1029,7 @@ body {
 }
 
 .info .button {
-    margin-top: 55px;
+    margin-top: 53px;
 }
 
 .contacts {
@@ -1164,7 +1225,7 @@ body {
 
 .price-controls span {
     display: inline-block;
-    vertical-align: center;
+    vertical-align: middle;
 
     padding-top: 6px;
 
@@ -1198,12 +1259,12 @@ body {
 
 .sorting-type {
     display: flex;
-    margin-right: 0;
+    margin-right: auto;
     padding: 0;
 }
 
 .sorting-type li {
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 .sorting-direction {
@@ -1212,8 +1273,9 @@ body {
 
 .sorting-direction .up {
     display: inline-block;
-    vertical-align: center;
+    vertical-align: middle;
 
+    font-size: 0;
     color: transparent;
 
     background: url("../img/icon-up-dir.svg") no-repeat center center;
@@ -1223,8 +1285,9 @@ body {
 
 .sorting-direction .down {
     display: inline-block;
-    vertical-align: center;
+    vertical-align: middle;
 
+    font-size: 0;
     color: transparent;
 
     background: url("../img/icon-down-dir.svg") no-repeat center center;
@@ -1334,7 +1397,7 @@ body {
     margin-bottom: 47px;
 
     display: inline-block;
-    vertical-align: center;
+    vertical-align: middle;
     width: 360px;
 
     text-align: center;
