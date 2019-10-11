@@ -669,8 +669,8 @@ body {
 
 .slider-controls {
     position: absolute;
-    right: 40px;
-    bottom: 161px;
+    top: 325px;
+    left: 970px;
     z-index: 100;
 
     width: 160px;
