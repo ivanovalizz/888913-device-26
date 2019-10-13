@@ -82,6 +82,7 @@
                 <h2 class="title visually-hidden">Фильтр:</h2>
                 <!-- Форма для фильтра -->
                 <form action="https://echo.htmlacademy.ru" method="get">
+                    <div class="separate"></div>
                     <fieldset class="filter-item">
                         <legend>Стоимость</legend>
                         <div>
@@ -97,46 +98,69 @@
                                 </div>
                             </div>
                             <div class="price-controls">
-                                <span class="min-price"></span>
-                                <span class="max-price"></span>
+                                <span class="min-price">от 0</span>
+                                <span class="max-price">до 5000</span>
                             </div>
                         </div>
                     </fieldset>
+                    <div class="separate"></div>
                     <fieldset class="filter-item">
                         <legend>Цвет</legend>
                         <ul class="filter filter-color">
                             <li>
-                                <input type="checkbox" name="color-black" id="filter-color-black" checked>
-                                <label for="filter-color-black">Чёрный</label>
+                                <label class="check option" for="filter-color-black">
+                                    <input class="check-input" type="checkbox" name="color-black" id="filter-color-black" checked>
+                                    <span class="check-box"></span>
+                                    Чёрный
+                                </label>
                             </li>
                             <li>
-                                <input type="checkbox" name="color-white" id="filter-color-white">
-                                <label for="filter-color-white">Белый</label>
+                                <label class="check option" for="filter-color-white">
+                                    <input class="check-input" type="checkbox" name="color-white" id="filter-color-white">
+                                    <span class="check-box"></span>
+                                    Белый
+                                </label>
                             </li>
                             <li>
-                                <input type="checkbox" name="color-blue" id="filter-color-blue" checked>
-                                <label for="filter-color-blue">Синий</label>
+                                <label class="check option" for="filter-color-blue">
+                                    <input class="check-input" type="checkbox" name="color-blue" id="filter-color-blue" checked>
+                                    <span class="check-box"></span>
+                                    Синий
+                                </label>
                             </li>
                             <li>
-                                <input type="checkbox" name="color-red" id="filter-color-red" checked>
-                                <label for="filter-color-red">Красный</label>
+                                <label class="check option" for="filter-color-red">
+                                    <input class="check-input" type="checkbox" name="color-red" id="filter-color-red" checked>
+                                    <span class="check-box"></span>
+                                    Красный
+                                </label>
                             </li>
                             <li>
-                                <input type="checkbox" name="color-pink" id="filter-color-pink">
-                                <label for="filter-color-pink">Розовый</label>
+                                <label class="check option" for="filter-color-pink">
+                                    <input class="check-input" type="checkbox" name="color-pink" id="filter-color-pink">
+                                    <span class="check-box"></span>
+                                    Розовый
+                                </label>
                             </li>
                         </ul>
                     </fieldset>
+                    <div class="separate"></div>
                     <fieldset class="filter-item">
                         <legend>Bluetooth</legend>
                         <ul class="filter filter-bluetooth">
                             <li>
-                                <input type="radio" name="filter-bluetooth" id="filter-bluetooth-on" value="yes" checked>
-                                <label for="filter-bluetooth-on">Есть</label>
+                                <label class="check option" for="filter-bluetooth-on">
+                                    <input class="radio-input" type="radio" name="filter-bluetooth" id="filter-bluetooth-on" value="yes" checked>
+                                    <span class="radio-box"></span>
+                                    Есть
+                                </label>
                             </li>
                             <li>
-                                <input type="radio" name="filter-bluetooth" id="filter-bluetooth-off" value="no">
-                                <label for="filter-bluetooth-off">Нет</label>
+                                <label class="check option" for="filter-bluetooth-off">
+                                    <input class="radio-input" type="radio" name="filter-bluetooth" id="filter-bluetooth-off" value="no">
+                                    <span class="radio-box"></span>
+                                    Нет
+                                </label>
                             </li>
                         </ul>
                     </fieldset>

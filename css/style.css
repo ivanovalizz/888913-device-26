@@ -44,6 +44,7 @@ body {
     font-size: 15px;
     font-weight: 300;
     line-height: 30px;
+    letter-spacing: 0.15px;
     color: #464646;
     background-color: #ffffff;
 }
@@ -107,7 +108,8 @@ body {
 
 .site-navigation {
     display: flex;
-    padding-left: 20px;
+    margin-top: -1px;
+    padding-left: 21px;
 }
 
 .site-navigation a {
@@ -115,7 +117,7 @@ body {
     vertical-align: middle;
     position: relative;
 
-    padding-left: 26px;
+    padding-left: 25px;
 }
 
 .site-navigation .login,
@@ -141,13 +143,13 @@ body {
 
 .site-navigation .login::before {
     position: absolute;
-    top: 8px;
-    left: 2px;
+    top: 9px;
+    left: -1px;
 
     width: 13px;
     height: 13px;
 
-    content: '';
+    content: "";
     background: url("../img/user.svg") no-repeat;
 }
 
@@ -159,31 +161,31 @@ body {
     width: 13px;
     height: 13px;
 
-    content: '';
+    content: "";
     background: url("../img/user.svg") no-repeat;
 }
 
 .site-navigation .compare::before {
     position: absolute;
-    top: 9px;
+    top: 11px;
     left: 5px;
 
     width: 10px;
     height: 10px;
 
-    content: '';
+    content: "";
     background: url("../img/compare.svg") no-repeat;
 }
 
 .site-navigation .cart::before {
     position: absolute;
-    top: 8px;
-    left: 2px;
+    top: 9px;
+    left: 3px;
 
     width: 13px;
     height: 13px;
 
-    content: '';
+    content: "";
     background: url("../img/cart.svg") no-repeat;
 }
 
@@ -256,7 +258,7 @@ body {
 .navigation-list .contacts {
     margin-left: auto;
     padding-right: 0;
-    margin-right: -3px;
+    margin-right: -4px;
 }
 
 .dropdown-list {
@@ -346,7 +348,7 @@ body {
 
     border: 2px solid transparent;
 
-    background: transparent url("../img/search.svg") no-repeat 1px 15px;
+    background: transparent url("../img/search.svg") no-repeat 0 17px;
 }
 
 .search-form input:focus,
@@ -432,7 +434,7 @@ body {
 }
 
 .catalog-list .button,
-.popup-form .button {
+.modal-feedback .button {
     width: 200px;
 }
 
@@ -509,6 +511,22 @@ body {
     display: none;
 }
 
+.slider-item .slider-content::before {
+    position: absolute;
+    top: 39px;
+    left: 600px;
+
+    width: 100px;
+    height: 7px;
+
+    background: #ffffff;
+    content: "";
+}
+
+.slider-item.slider-1 {
+    margin-bottom: 1px;
+}
+
 .slider-item.slider-2 {
     margin-bottom: -10px;
 }
@@ -528,7 +546,7 @@ body {
 }
 
 .slider-1 .slider-content {
-    padding-right: 82px;
+    padding-right: 75px;
     padding-left: 20px;
 }
 
@@ -540,17 +558,17 @@ body {
 
 .slider-2 .slider-content {
     padding-top: 9px;
-    padding-right: 82px;
+    padding-right: 100px;
     padding-left: 19px;
 }
 
 .slider-3 .slider-image {
-    padding-top: 32px;
+    padding-top: 33px;
     padding-left: 39px;
 }
 
 .slider-3 .slider-content {
-    padding-right: 82px;
+    padding-right: 52px;
     padding-left: 20px;
 }
 
@@ -564,8 +582,8 @@ body {
 }
 
 .slider-1 .tagline {
-    margin-top: 80px;
-    margin-bottom: 21px;
+    margin-top: 79px;
+    margin-bottom: 19px;
 
     max-width: 396px;
 }
@@ -578,15 +596,15 @@ body {
 }
 
 .slider-3 .tagline {
-    margin-bottom: 20px;
+    margin-bottom: 19px;
 
     min-width: 506px;
 }
 
 .slider-item.slider-1::after {
     position: absolute;
-    top: -10px;
-    right: 48px;
+    top: -13px;
+    right: 46px;
 
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 179px;
@@ -596,13 +614,13 @@ body {
     color: #ffffff;
     z-index: -1;
 
-    content: '01';
+    content: "01";
 }
 
 .slider-item.slider-2::after {
     position: absolute;
-    top: -12px;
-    right: 48px;
+    top: -13px;
+    right: 47px;
 
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 179px;
@@ -612,12 +630,12 @@ body {
     color: #ffffff;
     z-index: -1;
 
-    content: '02';
+    content: "02";
 }
 
 .slider-item.slider-3::after {
     position: absolute;
-    top: -10px;
+    top: -12px;
     right: 48px;
 
     font-family: "Gilroy", Arial, sans-serif;
@@ -634,6 +652,14 @@ body {
 .slider a.button {
     margin-top: 42px;
     margin-bottom: 49px;
+}
+
+.table {
+    margin-left: -2px;
+}
+
+.table th {
+    text-align: left;
 }
 
 .table td {
@@ -653,7 +679,7 @@ body {
 }
 
 .table th {
-    padding-top: 7px;
+    padding-top: 5px;
 
     font-size: 13px;
     line-height: 20px;
@@ -669,9 +695,9 @@ body {
 
 .slider-controls {
     position: absolute;
-    top: 325px;
-    left: 970px;
-    z-index: 100;
+    top: 329px;
+    left: 959px;
+    z-index: 2;
 
     width: 160px;
     height: 18px;
@@ -745,7 +771,7 @@ body {
 .catalog-index-item {
     position: relative;
     display: block;
-    padding-top: 195px;
+    padding-top: 193px;
     width: 160px;
 
     font-family: "Gilroy", Arial, sans-serif;
@@ -779,7 +805,7 @@ body {
 }
 
 .catalog-index-item.vr::after {
-    background: url("../img/popular-1.svg") no-repeat center center;
+    background: url("../img/popular-1.svg") no-repeat 31px 52px;
 }
 
 .catalog-index-item.monopods::after {
@@ -795,11 +821,11 @@ body {
 }
 
 .catalog-index-item.watches::after {
-    background: url("../img/popular-5.svg") no-repeat 55px center;
+    background: url("../img/popular-5.svg") no-repeat 55px 32px;
 }
 
 .catalog-index-item.quadrocopter::after {
-    background: url("../img/popular-6.svg") no-repeat center 49px;
+    background: url("../img/popular-6.svg") no-repeat 13px 49px;
 }
 
 /*---поведение---*/
@@ -827,7 +853,7 @@ body {
     font-size: 47px;
     line-height: 48px;
     font-weight: 800;
-    letter-spacing: 0.47px;
+    letter-spacing: 1.1px;
     color: #000000;
 }
 
@@ -844,7 +870,7 @@ body {
 
 .advantages-button {
     padding: 0;
-    padding-top: 80px;
+    padding-top: 81px;
     margin: 0;
     width: 291px;
 
@@ -858,7 +884,7 @@ body {
 .advantages-list {
     position: relative;
     margin: 0;
-    padding: 73px 334px 78px 116px;
+    padding: 74px 330px 78px 116px;
 
     width: 886px;
 }
@@ -872,22 +898,24 @@ body {
 }
 
 .advantages-list li:nth-child(2) {
-    display: none;
-}
-
-.advantages-list li:nth-child(3) {
     display: block;
 }
 
+.advantages-list li:nth-child(3) {
+    display: none;
+}
+
 .advantages-list p {
-    margin-top: 33px;
+    margin-top: 31px;
     margin-bottom: 0;
+
+    letter-spacing: 0.23px;
 }
 
 .advantages-list .slider-delivery::after {
     position: absolute;
-    bottom: 70px;
-    right: 65px;
+    bottom: 72px;
+    right: 66px;
 
     width: 137px;
     height: 165px;
@@ -898,7 +926,7 @@ body {
 
 .advantages-list .slider-warranty::after {
     position: absolute;
-    bottom: 67px;
+    bottom: 64px;
     right: 46px;
 
     width: 171px;
@@ -985,7 +1013,8 @@ body {
 
 .about h2 {
     margin: 0;
-    margin-bottom: 44px;
+    margin-bottom: 43px;
+    margin-left: -2px;
 
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 47px;
@@ -998,13 +1027,14 @@ body {
 .about section {
     width: 50%;
 
-    padding-top: 50px;
+    padding-top: 52px;
 }
 
 .about p {
     margin: 0;
     padding: 0;
     margin-bottom: 30px;
+    margin-left: -1px;
 }
 
 .info {
@@ -1012,11 +1042,13 @@ body {
 }
 
 .info p {
-    max-width: 475px;
+    margin-left: -1px;
+    max-width: 481px;
 }
 
 .info .partners-list {
     padding-top: 36px;
+    padding-left: 35px;
     margin: 0;
 
     list-style-type: circle;
@@ -1029,20 +1061,20 @@ body {
 }
 
 .info .button {
-    margin-top: 53px;
+    margin-top: 54px;
 }
 
 .contacts {
     position: relative;
-    padding-left: 20px;
+    padding-left: 19px;
 }
 
 .contacts p {
-    max-width: 512px;
+    max-width: 514px;
 }
 
 .contacts .button {
-    margin-top: 60px;
+    margin-top: 62px;
 }
 
 .contacts .map-image {
@@ -1137,10 +1169,23 @@ body {
 /* --- Настройка фильтров --- */
 
 .filters-section {
+    padding-top: 69px;
+
     font-size: 14px;
     line-height: 40px;
     letter-spacing: 0.14px;
     color: #000000;
+}
+
+.separate {
+    margin-bottom: 13px;
+
+    width: 100%;
+    height: 2px;
+
+    background: #000000;
+
+    content: "";
 }
 
 .title {
@@ -1172,13 +1217,8 @@ body {
 
     padding: 0;
     margin: 0;
-    margin-top: 41px;
 
     border: none;
-}
-
-.filter-item:first-child {
-    margin-top: 87px;
 }
 
 .filters-section input:disabled + label {
@@ -1210,24 +1250,27 @@ body {
 .range-controls .toggle {
     position: absolute;
 
-    top: 30px;
+    top: 28px;
 
     cursor: pointer;
 }
 
 .range-controls .toggle-min {
-    left: 10px;
+    left: -5px;
 }
 
 .range-controls .toggle-max {
-    left: 130px;
+    left: 105px;
+}
+
+.price-controls {
+    padding-top: 6px;
+    padding-bottom: 39px;
 }
 
 .price-controls span {
     display: inline-block;
     vertical-align: middle;
-
-    padding-top: 6px;
 
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 14px;
@@ -1235,6 +1278,73 @@ body {
     line-height: 24px;
     text-align: center;
     color: rgba(0, 0, 0, 0.2);
+}
+
+.price-controls .max-price {
+    margin-left: 57px;
+}
+
+/* --- Checkbox & radio --- */
+
+.filter-color,
+.filter-bluetooth {
+    padding: 0;
+}
+
+.option {
+    position: relative;
+    display: block;
+}
+
+.check {
+    padding-left: 40px;
+}
+
+.check-input,
+.radio-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.check-box {
+    position: absolute;
+    top: calc(50% - 13px);
+    left: 0;
+    width: 27px;
+    height: 23px;
+    background: url("../img/checkbox-off.svg") no-repeat;
+}
+
+.check-input:checked + .check-box {
+    background: url("../img/checkbox-on.svg") no-repeat;
+}
+
+.radio-box {
+    position: absolute;
+    top: calc(50% - 12px);
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background: url("../img/radio-off.svg") no-repeat;
+}
+
+.radio-input:checked + .radio-box {
+    background: url("../img/radio-on.svg") no-repeat;
+}
+
+.check-input:hover + .check-box,
+.check-input:focus + .check-box,
+.radio-input:hover + .radio-box,
+.radio-input:focus + .radio-box {
+    opacity: 0.6;
+}
+
+.check-input:disabled + .check-box,
+.radio-input:disabled + .radio-box {
+    opacity: 0.25;
 }
 
 /* --- Sorting ---*/
@@ -1269,6 +1379,14 @@ body {
 
 .sorting-direction {
     display: flex;
+    justify-content: space-between;
+
+    padding: 0;
+    width: 40px;
+}
+
+.sorting-direction a {
+    width: 10px;
 }
 
 .sorting-direction .up {
@@ -1473,7 +1591,6 @@ body {
     text-align: left;
 
     line-height: 24px;
-
 }
 
 /*---Подгонка ширины названий карточек товаров---*/
@@ -1495,6 +1612,7 @@ body {
 /*---*/
 
 .item-info .price {
+    flex-shrink: 0;
     margin: 0;
     text-align: right;
 }
@@ -1618,6 +1736,10 @@ body {
     content: "";
 }
 
+.main-footer p {
+    letter-spacing: 0;
+}
+
 .main-footer .footer-row {
     display: flex;
     justify-content: space-between;
@@ -1625,7 +1747,7 @@ body {
 }
 
 .footer-row:first-child {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .footer-row:last-child {
@@ -1637,6 +1759,8 @@ body {
     display: flex;
 
     margin: 0;
+    margin-top: -2px;
+    margin-right: -1px;
 
     color: rgba(255, 255, 255, 0.7);
     line-height: 36px;
@@ -1657,7 +1781,7 @@ body {
 
 .footer-action.login::before {
     position: absolute;
-    top: 2px;
+    top: 3px;
     left: -26px;
 
     width: 13px;
@@ -1670,8 +1794,8 @@ body {
 
 .footer-action.user::before {
     position: absolute;
-    top: 4px;
-    left: -26px;
+    top: 5px;
+    left: -21px;
 
     width: 13px;
     height: 13px;
@@ -1683,8 +1807,8 @@ body {
 
 .footer-action.compare::before {
     position: absolute;
-    top: 4px;
-    left: -22px;
+    top: 5px;
+    left: -21px;
 
     width: 11px;
     height: 11px;
@@ -1696,8 +1820,8 @@ body {
 
 .footer-action.cart::before {
     position: absolute;
-    top: 5px;
-    left: -26px;
+    top: 3px;
+    left: -22px;
 
     width: 13px;
     height: 13px;
@@ -1751,6 +1875,7 @@ body {
     justify-content: space-between;
 
     padding: 0;
+    margin-top: 21px;
 
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 18px;
@@ -1798,7 +1923,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    margin: 0 0 0 26px;
+    margin: -1px 0 0 26px;
     padding: 0;
 
     list-style: none;
@@ -1858,31 +1983,45 @@ body {
     fill: #ffc600;
 }
 
-/* --- Pop-up feedback --- */
+.main-footer .logo-academy {
+    display: block;
+    margin-top: -3px;
+}
 
-.popup-form {
-    position: relative;
-    margin: auto;
-    padding: 98px 100px 78px;
-    width: 960px;
-    height: 556px;
+/* --- Modal feedback --- */
+
+.modal {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    margin-left: -480px;
+    margin-top: -270px;
+
+    background: #ffffff;
 
     box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
 }
 
-.popup-form form {
+.modal-feedback {
+    padding: 98px 100px 78px;
+    width: 960px;
+    height: 553px;
+}
+
+.modal-feedback form {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.popup-form p {
+.modal-feedback p {
     display: flex;
     flex-direction: column;
     margin: 0;
 }
 
-.popup-form label {
+.modal-feedback label {
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 18px;
     font-weight: 800;
@@ -1891,13 +2030,13 @@ body {
     color: #000000;
 }
 
-.popup-form input,
-.popup-form textarea {
+.modal-feedback input,
+.modal-feedback textarea {
     margin-bottom: 39px;
 }
 
-.popup-form input[type="text"],
-.popup-form input[type="email"] {
+.modal-feedback input[type="text"],
+.modal-feedback input[type="email"] {
     width: 360px;
     padding-top: 18px;
     padding-bottom: 20px;
@@ -1908,7 +2047,7 @@ body {
     background: #f2f2f2;
 }
 
-.popup-form textarea {
+.modal-feedback textarea {
     width: 760px;
     padding-top: 18px;
     padding-left: 20px;
@@ -1924,25 +2063,27 @@ body {
     background: url("../img/modal-close.svg")
 }
 
-.popup-form input:hover,
-.popup-form textarea:hover {
+.modal-feedback input:hover,
+.modal-feedback textarea:hover {
     background: #eaeaea;
 }
 
-.popup-form input:focus,
-.popup-form textarea:focus {
+.modal-feedback input:focus,
+.modal-feedback textarea:focus {
     background: #ffffff;
     border: 3px solid #f0c52e;
 }
 
-.popup-form input:required,
-.popup-form textarea:required {
+.modal-feedback input:required,
+.modal-feedback textarea:required {
     background: #f6dada;
 }
 
-/*--- Pop-up Map ---*/
+/*--- Modal Map ---*/
 
-.popup-map {
+.modal-map {
+    display: none;
+
     position: relative;
     margin: 0 auto;
     width: 960px;
