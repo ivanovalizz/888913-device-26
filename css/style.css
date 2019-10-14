@@ -70,7 +70,7 @@ body {
     font-size: 47px;
     font-weight: 800;
     line-height: 48px;
-    letter-spacing: 0.47px;
+    letter-spacing: 0.68px;
     color: #000000;
 }
 
@@ -98,7 +98,7 @@ body {
 
 .main-header-logo {
     display: inline-block;
-    transform: translateY(-19px);
+    transform: translateY(-17px);
 }
 
 .search-form,
@@ -125,6 +125,10 @@ body {
     width: 57%;
 }
 
+.site-navigation .login-wrapper {
+    margin-top: -2px;
+}
+
 .site-navigation .cart {
     margin-left: auto;
 }
@@ -139,6 +143,7 @@ body {
 
 .site-navigation .button-exit {
     padding: 0;
+    margin-left: -4px;
 }
 
 .site-navigation .login::before {
@@ -156,7 +161,7 @@ body {
 .site-navigation .user::before {
     position: absolute;
     top: 9px;
-    left: 2px;
+    left: -1px;
 
     width: 13px;
     height: 13px;
@@ -460,7 +465,7 @@ body {
 }
 
 .filter-apply {
-    margin-top: 39px;
+    margin-top: 32px;
     width: 100%;
 }
 
@@ -533,7 +538,7 @@ body {
 
 .slider-item.slider-3 {
     padding-top: 32px;
-    margin-bottom: 11px;
+    margin-bottom: 15px;
 }
 
 .slider-columns {
@@ -685,6 +690,10 @@ body {
     line-height: 20px;
     letter-spacing: 0.13px;
     font-weight: 300;
+}
+
+.slider-item.slider-3 td {
+    padding-right: 57px;
 }
 
 /*slider*/
@@ -1074,11 +1083,11 @@ body {
 }
 
 .contacts .button {
-    margin-top: 62px;
+    margin-top: 60px;
 }
 
 .contacts .map-image {
-    padding-top: 7px;
+    padding-top: 9px;
 }
 
 .about .contacts::before {
@@ -1118,7 +1127,7 @@ body {
 .breadcrumbs li {
     position: relative;
 
-    margin-left: 25px;
+    margin-left: 19px;
     padding-right: 18px;
 
     list-style: none;
@@ -1169,7 +1178,7 @@ body {
 /* --- Настройка фильтров --- */
 
 .filters-section {
-    padding-top: 69px;
+    padding-top: 80px;
 
     font-size: 14px;
     line-height: 40px;
@@ -1177,8 +1186,27 @@ body {
     color: #000000;
 }
 
-.separate {
-    margin-bottom: 13px;
+.filters-section legend {
+    position: relative;
+    width: 100%;
+
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
+    letter-spacing: 0.18px;
+    color: #000000;
+}
+
+.filter-item:not(:first-child) legend {
+    margin-bottom: 19px;
+}
+
+.filter-item legend::before {
+    position: absolute;
+
+    top: -12px;
+    left: 0;
 
     width: 100%;
     height: 2px;
@@ -1195,15 +1223,6 @@ body {
     font-weight: 800;
     letter-spacing: 3.6px;
     text-transform: uppercase;
-    color: #000000;
-}
-
-.filters-section legend {
-    font-family: "Gilroy", Arial, sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 800;
-    letter-spacing: 3.6px;
     color: #000000;
 }
 
@@ -1225,12 +1244,18 @@ body {
     color: #a6a6a6;
 }
 
+.filter.filter-color {
+    margin: 0;
+    margin-left: -1px;
+    padding-bottom: 42px;
+}
+
 /*filter price range*/
 
 .range-controls {
     position: relative;
 
-    padding-top: 39px;
+    padding-top: 35px;
 }
 
 .range-controls .scale {
@@ -1250,7 +1275,7 @@ body {
 .range-controls .toggle {
     position: absolute;
 
-    top: 28px;
+    top: 23px;
 
     cursor: pointer;
 }
@@ -1260,11 +1285,11 @@ body {
 }
 
 .range-controls .toggle-max {
-    left: 105px;
+    left: 108px;
 }
 
 .price-controls {
-    padding-top: 6px;
+    padding: 0;
     padding-bottom: 39px;
 }
 
@@ -1281,7 +1306,11 @@ body {
 }
 
 .price-controls .max-price {
-    margin-left: 57px;
+    margin-left: 59px;
+}
+
+.filter-bluetoth {
+    margin: -1px 0;
 }
 
 /* --- Checkbox & radio --- */
@@ -1289,6 +1318,7 @@ body {
 .filter-color,
 .filter-bluetooth {
     padding: 0;
+    margin: -1px 0;
 }
 
 .option {
@@ -1324,7 +1354,7 @@ body {
 
 .radio-box {
     position: absolute;
-    top: calc(50% - 12px);
+    top: calc(50% - 13px);
     left: 0;
     width: 25px;
     height: 25px;
@@ -1361,6 +1391,36 @@ body {
     background: linear-gradient(to right, #ebebeb 50%, #ffffff 50%);
 }
 
+.catalog-columns,
+.sorting-wrapper {
+    display: flex;
+}
+
+.sorting-wrapper {
+    background: linear-gradient(to right, #d9d9d9 327px, #ebebeb 327px);
+}
+
+.catalog-columns {
+    background: linear-gradient(to right, #ebebeb 327px, #ffffff 327px);
+}
+
+.sorting-wrapper > .title {
+    width: 327px;
+    margin: 0;
+    padding: 23px 0 23px 61px;
+}
+
+.filters-section {
+    width: 327px;
+    padding-right: 67px;
+    padding-left: 59px;
+}
+
+.sorting,
+.catalog-section {
+    width: 833px;
+}
+
 .sorting {
     display: flex;
     justify-content: space-between;
@@ -1369,18 +1429,20 @@ body {
 
 .sorting-type {
     display: flex;
+    margin-top: 8px;
     margin-right: auto;
     padding: 0;
 }
 
 .sorting-type li {
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 .sorting-direction {
     display: flex;
     justify-content: space-between;
 
+    margin-top: 9px;
     padding: 0;
     width: 40px;
 }
@@ -1414,7 +1476,7 @@ body {
 }
 
 .sorting .title {
-    margin: 23px 55px 23px 73px;
+    margin: 21px 51px 23px 74px;
 }
 
 .sorting-type a,
@@ -1453,6 +1515,18 @@ body {
 
 /*--- Список товаров страницы Каталог ---*/
 
+.catalog-section {
+    padding: 69px 0 77px 73px;
+}
+
+.catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0;
+    padding: 0;
+}
+
 .catalog-item a {
     text-decoration: none;
 }
@@ -1464,48 +1538,6 @@ body {
     letter-spacing: 0.18px;
     font-weight: 800;
     color: #000000;
-}
-
-.catalog-columns,
-.sorting-wrapper {
-    display: flex;
-}
-
-.sorting-wrapper {
-    background: linear-gradient(to right, #d9d9d9 327px, #ebebeb 327px);
-}
-
-.catalog-columns {
-    background: linear-gradient(to right, #ebebeb 327px, #ffffff 327px);
-}
-
-.sorting-wrapper > .title {
-    margin: 0;
-    padding: 23px 0 23px 59px;
-}
-
-.sorting-wrapper > .title,
-.filters-section {
-    width: 327px;
-    padding-right: 67px;
-    padding-left: 60px;
-}
-
-.sorting,
-.catalog-section {
-    width: 833px;
-}
-
-.catalog-section {
-    padding: 69px 0 77px 73px;
-}
-
-.catalog-list {
-    display: flex;
-    flex-wrap: wrap;
-
-    margin: 0;
-    padding: 0;
 }
 
 .catalog-item {
@@ -1581,7 +1613,7 @@ body {
     display: flex;
     justify-content: space-between;
 
-    padding-top: 32px;
+    padding-top: 30px;
 }
 
 .item-name {
@@ -1614,7 +1646,14 @@ body {
 .item-info .price {
     flex-shrink: 0;
     margin: 0;
+    margin-top: 2px;
     text-align: right;
+
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.16px;
+    font-weight: 300;
 }
 
 /* --- Pagination --- */
@@ -1638,23 +1677,19 @@ body {
 
 .pagination-button {
     display: block;
-    padding: 25px 28px 22px 30px;
+    padding: 24px 28px 23px 30px;
 }
 
 .pagination-list {
     display: flex;
 
     margin: 0;
-    padding: 26px 0 21px;
+    padding: 25px 0 22px 11px;
 }
 
 .pagination-list li:not(:last-child) {
     margin-right: 27px;
 }
-/*
-.pagination-list li:not(:first-child) {
-    margin-left: 1px;
-}*/
 
 .pagination li {
     list-style: none;
@@ -1688,11 +1723,11 @@ body {
 .pagination-button {
     color: #000000;
 }
-/*
+
 .button-next {
-    text-align: right;
+    margin-right: -1px;
 }
-*/
+
 .pagination-button:hover,
 .pagination-button:focus,
 .pagination-button:active {
@@ -1747,7 +1782,7 @@ body {
 }
 
 .footer-row:first-child {
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 }
 
 .footer-row:last-child {
@@ -1776,7 +1811,7 @@ body {
 }
 
 .footer-action.button-exit {
-    margin-left: 20px;
+    margin-left: 16px;
 }
 
 .footer-action.login::before {
@@ -1794,8 +1829,8 @@ body {
 
 .footer-action.user::before {
     position: absolute;
-    top: 5px;
-    left: -21px;
+    top: 2px;
+    left: -26px;
 
     width: 13px;
     height: 13px;
@@ -1807,8 +1842,8 @@ body {
 
 .footer-action.compare::before {
     position: absolute;
-    top: 5px;
-    left: -21px;
+    top: 4px;
+    left: -23px;
 
     width: 11px;
     height: 11px;
@@ -1955,8 +1990,8 @@ body {
 
 /*--- Поведение логотипа при наведении ---*/
 
-.logo:hover,
-.logo:focus,
+.main-header-logo:hover,
+.main-header-logo:focus,
 .logo-academy:hover,
 .logo-academy:focus,
 .footer-logo:hover path,
@@ -1964,7 +1999,7 @@ body {
     opacity: 0.6;
 }
 
-.logo:active,
+.main-header-logo:active,
 .logo-academy:active,
 .footer-logo:active path {
     opacity: 0.3;
@@ -2001,9 +2036,11 @@ body {
     background: #ffffff;
 
     box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
+    z-index: 100;
 }
 
 .modal-feedback {
+    display: none;
     padding: 98px 100px 78px;
     width: 960px;
     height: 553px;
@@ -2084,14 +2121,10 @@ body {
 .modal-map {
     display: none;
 
-    position: relative;
-    margin: 0 auto;
     width: 960px;
     height: 559px;
 
-    box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
-
-    background: url("../img/map.jpg") no-repeat;
+    background: #ffffff url("../img/map.jpg") no-repeat;
 }
 
 .button-close {
