@@ -615,7 +615,7 @@ body {
     margin-top: 79px;
     margin-bottom: 19px;
 
-    max-width: 396px;
+    max-width: 450px;
 }
 
 .slider-2 .tagline {
@@ -628,7 +628,7 @@ body {
 .slider-3 .tagline {
     margin-bottom: 19px;
 
-    min-width: 506px;
+    max-width: 550px;
 }
 
 .slider-item.slider-1::after {
@@ -1910,7 +1910,7 @@ body {
 }
 
 .footer-row:nth-child(2) p {
-    width: 210px;
+    width: 215px;
 }
 
 .footer-row .phone-number {
