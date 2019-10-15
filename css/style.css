@@ -2,21 +2,32 @@
 
 @font-face {
     font-family: "Gilroy";
-    src: url('../fonts/gilroyextrabold.woff2');
+    src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
+         url("../fonts/gilroyextrabold.woff") format("woff");
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Gilroy";
-    src: url('../fonts/gilroylight.woff2');
+    src: url('../fonts/gilroylight.woff2') format("woff2"),
+         url("../fonts/gilroylight.woff") format("woff");
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Open Sans";
-    src: url('../fonts/opensans300.woff2');
+    src: url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/opensanslight.woff2") format("woff2"),
+         url("../fonts/opensanslight.woff") format("woff");
     font-weight: 300;
     font-style: normal;
 }
@@ -269,10 +280,10 @@ body {
 .dropdown-list {
     display: none;
     position: absolute;
-    top: 24px;
+    top: 18px;
     left: -60px;
 
-    padding: 28px 60px 27px;
+    padding: 28px 60px 35px;
     margin: 0;
     width: 1160px;
 
@@ -294,7 +305,7 @@ body {
 
 .dropdown-list .col-2 {
     min-width: 126px;
-    margin-right: 77px;
+    margin-right: 74px;
     padding: 0;
 }
 
@@ -462,6 +473,19 @@ body {
 
 .advantages-button .button.active {
     width: 100%;
+    text-align: left;
+}
+/* --- Отступы для кнопок в слайдере --- */
+.advantages-button .button-delivery.active {
+    padding-left: 19px;
+}
+
+.advantages-button .button-warranty.active {
+    padding-left: 25px;
+}
+
+.advantages-button .button-credit.active {
+    padding-left: 37px;
 }
 
 .filter-apply {
@@ -903,11 +927,11 @@ body {
 }
 
 .advantages-list li:nth-child(1) {
-    display: none;
+    display: block;
 }
 
 .advantages-list li:nth-child(2) {
-    display: block;
+    display: none;
 }
 
 .advantages-list li:nth-child(3) {
@@ -1566,7 +1590,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0;
-    padding-top: 30px;
+    padding-top: 35px;
 
     width: 100%;
     height: 100%;
@@ -1591,7 +1615,7 @@ body {
 }
 
 .comparison { /*Добавить к сравнению*/
-    margin-top: 10px;
+    margin-top: 15px;
     font: inherit;
     font-size: 13px;
     line-height: 20px;
@@ -2041,7 +2065,7 @@ body {
 
 .modal-feedback {
     display: none;
-    padding: 98px 100px 78px;
+    padding: 92px 100px 78px;
     width: 960px;
     height: 553px;
 }
@@ -2063,22 +2087,20 @@ body {
     font-size: 18px;
     font-weight: 800;
     line-height: 24px;
-    letter-spacing: 3.2px;
     color: #000000;
 }
 
-.modal-feedback input,
-.modal-feedback textarea {
-    margin-bottom: 39px;
+.modal-feedback input {
+    margin-bottom: 33px;
 }
 
 .modal-feedback input[type="text"],
 .modal-feedback input[type="email"] {
     width: 360px;
-    padding-top: 18px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    margin-top: 10px;
+    padding-top: 14px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    margin-top: 6px;
     border: 3px solid transparent;
 
     background: #f2f2f2;
@@ -2086,12 +2108,30 @@ body {
 
 .modal-feedback textarea {
     width: 760px;
-    padding-top: 18px;
-    padding-left: 20px;
-    margin-top: 10px;
+    padding: 12px 17px 17px;
+    margin-top: 7px;
+    margin-bottom: 41px;
 
     background: #f2f2f2;
     border: 3px solid transparent;
+}
+
+.modal-feedback input[type="text"]::-moz-placeholder, /* Mozilla Firefox*/
+.modal-feedback input[type="email"]::-moz-placeholder,
+.modal-feedback input[type="text"]::-webkit-input-placeholder, /* Opera, Chrome*/
+.modal-feedback input[type="email"]::-webkit-input-placeholder,
+.modal-feedback input[type="text"]:-ms-input-placeholder, /* Internet Explorer */
+.modal-feedback input[type="email"]:-ms-input-placeholder,
+.modal-feedback input[type="text"]::-ms-input-placeholder, /* Microsoft Edge */
+.modal-feedback input[type="email"]::-ms-input-placeholder,
+.modal-feedback input[type="text"]::placeholder,
+.modal-feedback input[type="email"]::placeholder {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+
+    color: rgba(70, 70, 70, 0.4);
 }
 
 .popup .button-close {
