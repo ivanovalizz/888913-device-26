@@ -2053,6 +2053,8 @@ body {
 .modal {
     position: fixed;
 
+    display: none;
+
     top: 50%;
     left: 50%;
     margin-left: -480px;
@@ -2065,10 +2067,13 @@ body {
 }
 
 .modal-feedback {
-    display: none;
     padding: 92px 100px 78px;
     width: 960px;
     height: 553px;
+}
+
+.modal-show {
+    display: block;
 }
 
 .modal-feedback form {
@@ -2160,12 +2165,26 @@ body {
 /*--- Modal Map ---*/
 
 .modal-map {
-    display: none;
-
     width: 960px;
     height: 559px;
 
-    background: #ffffff url("../img/map.jpg") no-repeat;
+    background: #ffffff;
+}
+
+.modal-map p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    margin: 0;
+}
+
+.modal-map iframe {
+    position: relative;
+    z-index: 2;
+
+    border: none;
 }
 
 .button-close {
