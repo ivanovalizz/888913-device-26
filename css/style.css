@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: "Gilroy";
-    src: url('../fonts/gilroylight.woff2') format("woff2"),
+    src: url("../fonts/gilroylight.woff2") format("woff2"),
          url("../fonts/gilroylight.woff") format("woff");
     font-weight: 300;
     font-style: normal;
@@ -109,6 +109,7 @@ body {
 
 .main-header-logo {
     display: inline-block;
+    vertical-align: middle;
     transform: translateY(-17px);
 }
 
@@ -394,14 +395,14 @@ body {
     vertical-align: middle;
 }
 
-.main-header .button-search:hover,
-.main-header .button-search:focus,
-.main-header .button-search:active {
+.button-search:hover,
+.button-search:focus,
+.button-search:active {
     background: #000000;
 }
 
-.main-header .button-search:hover,
-.main-header .button-search:focus {
+.button-search:hover,
+.button-search:focus {
     color: #ffffff;
 }
 
@@ -679,7 +680,7 @@ body {
     content: "03";
 }
 
-.slider a.button {
+.slider .button {
     margin-top: 42px;
     margin-bottom: 49px;
 }
@@ -728,12 +729,16 @@ body {
 }
 
 .slider-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     position: absolute;
-    top: 329px;
-    left: 959px;
+    top: 325px;
+    left: 999px;
     z-index: 2;
 
-    width: 160px;
+    width: 78px;
     height: 18px;
 
     text-align: center;
@@ -743,8 +748,6 @@ body {
 .slider-controls label {
     position: relative;
 
-    display: inline-block;
-    /*vertical-align: middle;*/
     width: 12px;
     height: 12px;
 
@@ -770,6 +773,14 @@ body {
     display: flex;
 }
 
+.product-1:focus ~ .slider-controls,
+.product-2:focus ~ .slider-controls,
+.product-3:focus ~ .slider-controls {
+    outline: 1px solid #4D90FE;
+    -webkit-box-shadow: 0 0 5px  #4D90FE;
+    box-shadow: 0 0 5px #4D90FE;
+}
+
 /* для активного слайда иконка */
 .product-1:checked ~ .slider-controls .slider-controls-item--1,
 .product-2:checked ~ .slider-controls .slider-controls-item--2,
@@ -789,6 +800,7 @@ body {
 .catalog-index {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     margin: 0;
     padding: 0;
@@ -987,6 +999,7 @@ body {
 .brand-list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     margin: 0;
     padding: 93px 0 85px;
@@ -1891,21 +1904,12 @@ body {
     content: "";
 }
 
-.footer-action.login:hover::before,
-.footer-action.login:focus::before,
-.footer-action.user:hover::before,
-.footer-action.user:focus::before,
-.footer-action.compare:hover::before,
-.footer-action.compare:focus::before,
-.footer-action.cart:hover::before,
-.footer-action.cart:focus::before {
+.footer-action:hover::before,
+.footer-action:focus::before {
     opacity: 0.6;
 }
 
-.footer-action.login:active::before,
-.footer-action.user:active::before,
-.footer-action.compare:active::before,
-.footer-action.cart:active::before {
+.footer-action:active::before {
     opacity: 0.3;
 }
 
@@ -1933,6 +1937,7 @@ body {
 .footer-advantages {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     padding: 0;
     margin-top: 21px;
@@ -2066,46 +2071,6 @@ body {
     z-index: 100;
 }
 
-@keyframes bounce {
-    0% {
-        transform: translateY(-2000px);
-    }
-
-    70% {
-        transform: translateY(30px);
-    }
-
-    90% {
-        transform: translateY(-10px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes shake {
-    0%,
-    100% {
-        transform: translateX(0);
-    }
-
-    10%,
-    30%,
-    50%,
-    70%,
-    90% {
-        transform: translateX(-10px);
-    }
-
-    20%,
-    40%,
-    60%,
-    80% {
-        transform: translateX(10px);
-    }
-}
-
 .modal-feedback {
     padding: 92px 100px 78px;
     width: 960px;
@@ -2146,8 +2111,8 @@ body {
     margin-bottom: 33px;
 }
 
-.modal-feedback input[type="text"],
-.modal-feedback input[type="email"] {
+.modal-feedback .input-name,
+.modal-feedback .input-email {
     width: 360px;
     padding-top: 14px;
     padding-bottom: 15px;
@@ -2158,7 +2123,7 @@ body {
     background: #f2f2f2;
 }
 
-.modal-feedback textarea {
+.modal-feedback .input-message {
     width: 760px;
     padding: 12px 17px 17px;
     margin-top: 7px;
@@ -2168,16 +2133,16 @@ body {
     border: 3px solid transparent;
 }
 
-.modal-feedback input[type="text"]::-moz-placeholder, /* Mozilla Firefox*/
-.modal-feedback input[type="email"]::-moz-placeholder,
-.modal-feedback input[type="text"]::-webkit-input-placeholder, /* Opera, Chrome*/
-.modal-feedback input[type="email"]::-webkit-input-placeholder,
-.modal-feedback input[type="text"]:-ms-input-placeholder, /* Internet Explorer */
-.modal-feedback input[type="email"]:-ms-input-placeholder,
-.modal-feedback input[type="text"]::-ms-input-placeholder, /* Microsoft Edge */
-.modal-feedback input[type="email"]::-ms-input-placeholder,
-.modal-feedback input[type="text"]::placeholder,
-.modal-feedback input[type="email"]::placeholder {
+.modal-feedback .input-name::-moz-placeholder, /* Mozilla Firefox*/
+.modal-feedback .input-email::-moz-placeholder,
+.modal-feedback .input-name::-webkit-input-placeholder, /* Opera, Chrome*/
+.modal-feedback .input-email::-webkit-input-placeholder,
+.modal-feedback .input-name:-ms-input-placeholder, /* Internet Explorer */
+.modal-feedback .input-email:-ms-input-placeholder,
+.modal-feedback .input-name::-ms-input-placeholder, /* Microsoft Edge */
+.modal-feedback .input-email::-ms-input-placeholder,
+.modal-feedback .input-name::placeholder,
+.modal-feedback .input-email::placeholder {
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 14px;
     line-height: 18px;
@@ -2257,4 +2222,44 @@ body {
     opacity: 0.3;
 }
 
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+
+    70% {
+        transform: translateY(30px);
+    }
+
+    90% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
 

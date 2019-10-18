@@ -59,7 +59,7 @@
             <li><a class="active">Моноподы для селфи</a></li>
         </ul>
     </div>
-    <div class="sorting-background"> <!-- Обертка с фоном -->
+    <div class="sorting-background">
         <div class="container sorting-wrapper">
             <h2 class="title">Фильтр:</h2>
             <div class="sorting">
@@ -76,7 +76,7 @@
             </div>
         </div>
     </div>
-    <div class="catalog-content-background"> <!-- Обертка с фоном -->
+    <div class="catalog-content-background">
         <div class="container catalog-columns">
             <section class="filters-section">
                 <h2 class="visually-hidden">Фильтр:</h2>
@@ -89,11 +89,19 @@
                                 <div class="scale">
                                     <div class="bar"></div>
                                 </div>
-                                <div class="toggle toggle-min">
-                                    <img src="img/filter-button.svg" alt="Ползунок минимальной границы стоимости">
+                                <div class="toggle toggle-min" tabindex="0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23">
+                                        <path opacity=".3" fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z"></path>
+                                        <circle fill="#FFF" cx="10" cy="10" r="10"></circle>
+                                        <circle fill="#ABABAB" cx="10" cy="10" r="2"></circle>
+                                    </svg>
                                 </div>
-                                <div class="toggle toggle-max">
-                                    <img src="img/filter-button.svg" alt="Ползунок максимальной границы стоимости">
+                                <div class="toggle toggle-max" tabindex="0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23">
+                                        <path opacity=".3" fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z"></path>
+                                        <circle fill="#FFF" cx="10" cy="10" r="10"></circle>
+                                        <circle fill="#ABABAB" cx="10" cy="10" r="2"></circle>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="price-controls">
@@ -278,7 +286,7 @@
                     </a>
                 </li>
             </ul>
-            <a class="logo-academy" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html.svg" alt="HTML Academy"></a>
+            <a class="logo-academy" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html.svg" alt="HTML Academy" width="26" height="34"></a>
         </div>
     </div>
 </footer>

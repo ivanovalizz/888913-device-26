@@ -32,10 +32,13 @@ close.addEventListener("click", function(evt) {
 });
 
 form.addEventListener("submit", function(evt) {
+    popup.classList.remove("modal-error");
     if (!user.value || !email.value || !message.value) {
         evt.preventDefault();
         popup.classList.remove("modal-error");
-        popup.classList.add("modal-error");
+        setTimeout(function() {
+            popup.classList.add("modal-error");
+        }, 0.3)
     } else {
         if (isStorageSupport) {
             localStorage.setItem("email", email.value);
@@ -48,6 +51,7 @@ window.addEventListener("keydown", function(evt) {
        if (popup.classList.contains("modal-show")) {
            evt.preventDefault();
            popup.classList.remove("modal-show");
+           popup.classList.remove("modal-error");
        }
    }
 });
