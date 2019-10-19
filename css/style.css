@@ -456,40 +456,6 @@ body {
     width: 200px;
 }
 
-.button:active {
-    color: rgba(0, 0, 0, 0.3);
-}
-
-.advantages-button .button {
-    width: 160px;
-}
-
-.advantages-button .button:active,
-.advantages-button .button.active,
-.advantages-button .button.active:hover,
-.advantages-button .button.active:focus,
-.advantages-button .button.active:active {
-    color: #f7e184;
-    background: #000000;
-}
-
-.advantages-button .button.active {
-    width: 100%;
-    text-align: left;
-}
-/* --- Отступы для кнопок в слайдере --- */
-.advantages-button .button-delivery.active {
-    padding-left: 19px;
-}
-
-.advantages-button .button-warranty.active {
-    padding-left: 25px;
-}
-
-.advantages-button .button-credit.active {
-    padding-left: 37px;
-}
-
 .filter-apply {
     margin-top: 32px;
     width: 100%;
@@ -892,6 +858,16 @@ body {
 
 /*--- Слайдер с преимуществами главной страницы ---*/
 
+.button:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.advantages-button .button {
+    display: flex;
+    justify-content: flex-start;
+    width: 160px;
+}
+
 .advantages-list h3 {
     margin: 0;
 
@@ -927,17 +903,71 @@ body {
     margin-bottom: 25px;
 }
 
+.advantages-list li {
+    display: none;
+}
+
+.advantage-1:checked ~ .advantages-list .slider-delivery {
+    display: block;
+}
+
+.advantage-2:checked ~ .advantages-list .slider-warranty {
+    display: block;
+}
+
+.advantage-3:checked ~ .advantages-list .slider-credit {
+    display: block;
+}
+
+.advantages-button .button:hover,
+.advantages-button .button:focus {
+    cursor: pointer;
+}
+
+.advantage-1:checked ~ .advantages-button .button-delivery,
+.advantage-2:checked ~ .advantages-button .button-warranty,
+.advantage-3:checked ~ .advantages-button .button-credit,
+.advantages-button .button:active {
+    color: #f7e184;
+    background: #000000;
+}
+
+.advantage-1:checked ~ .advantages-button .button-delivery,
+.advantage-2:checked ~ .advantages-button .button-warranty,
+.advantage-3:checked ~ .advantages-button .button-credit {
+    width: 100%;
+}
+
+.button-text {
+    display: inline-block;
+    vertical-align: middle;
+    width: 160px;
+    text-align: center;
+}
+
+/* --- Отступы для кнопок в слайдере --- */
+/*.advantage-1:checked ~ .advantages-button .button-delivery {
+    padding-left: 17px;
+}
+
+.advantage-2:checked ~ .advantages-button .button-warranty {
+    padding-left: 23px;
+}
+
+.advantage-3:checked ~ .advantages-button .button-credit {
+    padding-left: 35px;
+}
+*/
 .advantages-list {
     position: relative;
     margin: 0;
     padding: 74px 330px 78px 116px;
 
-    width: 886px;
+    width: 887px;
 }
 
 .advantages-list li:not(:first-child) {
     padding: 0;
-    display: none;
 }
 
 .advantages-list p {
@@ -956,6 +986,7 @@ body {
     height: 165px;
 
     background: url("../img/delivery.svg") no-repeat center center;
+    background-size: 137px 165px;
     content: "";
 }
 
@@ -968,6 +999,7 @@ body {
     height: 194px;
 
     background: url("../img/warranty.svg") no-repeat center center;
+    background-size: 171px 194px;
     content: "";
 }
 
@@ -980,6 +1012,7 @@ body {
     height: 186px;
 
     background: url("../img/credit.svg") no-repeat center center;
+    background-size: 156px 186px;
     content: "";
 }
 
