@@ -937,17 +937,6 @@ body {
 
 .advantages-list li:not(:first-child) {
     padding: 0;
-}
-
-.advantages-list li:nth-child(1) {
-    display: block;
-}
-
-.advantages-list li:nth-child(2) {
-    display: none;
-}
-
-.advantages-list li:nth-child(3) {
     display: none;
 }
 
@@ -1442,7 +1431,7 @@ body {
     background: linear-gradient(to right, #ebebeb 327px, #ffffff 327px);
 }
 
-.sorting-wrapper > .title {
+.sorting-wrapper .title {
     width: 327px;
     margin: 0;
     padding: 23px 0 23px 61px;
