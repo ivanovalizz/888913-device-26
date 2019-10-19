@@ -985,7 +985,7 @@ body {
     width: 137px;
     height: 165px;
 
-    background: url("../img/delivery.svg") no-repeat center center;
+    background: url("../img/delivery.png") no-repeat center center;
     background-size: 137px 165px;
     content: "";
 }
@@ -998,7 +998,7 @@ body {
     width: 171px;
     height: 194px;
 
-    background: url("../img/warranty.svg") no-repeat center center;
+    background: url("../img/warranty.png") no-repeat center center;
     background-size: 171px 194px;
     content: "";
 }
@@ -1011,7 +1011,7 @@ body {
     width: 156px;
     height: 186px;
 
-    background: url("../img/credit.svg") no-repeat center center;
+    background: url("../img/credit.png") no-repeat center center;
     background-size: 156px 186px;
     content: "";
 }
