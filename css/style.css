@@ -51,7 +51,7 @@ body {
 
     min-width: 1160px;
 
-    font-family: "Open Sans", Arial, sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 15px;
     font-weight: 300;
     line-height: 30px;
@@ -77,7 +77,7 @@ body {
     margin-left: 60px;
     padding: 0;
 
-    font-family: "Gilroy", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 47px;
     font-weight: 800;
     line-height: 48px;
@@ -239,7 +239,7 @@ body {
 .navigation-item {
     display: block;
 
-    font-family: "Gilroy", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
     font-weight: 800;
@@ -330,7 +330,7 @@ body {
 
 .user-navigation {
     color: #000000;
-    padding-top: -1px;
+    padding-top: 0;
 }
 
 .main-header a:hover,
@@ -425,7 +425,7 @@ body {
 .button {
     display: block;
     padding: 8px 0;
-    font-family: "Gilroy", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
     font-weight: 800;
@@ -570,7 +570,7 @@ body {
 }
 
 .tagline {
-    font-family: "Gilroy", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 47px;
     line-height: 56px;
     font-weight: 800;
@@ -603,7 +603,7 @@ body {
     top: -13px;
     right: 46px;
 
-    font-family: "Gilroy", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 179px;
     font-weight: 800;
     line-height: 179px;
@@ -619,7 +619,7 @@ body {
     top: -13px;
     right: 47px;
 
-    font-family: "Gilroy", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 179px;
     font-weight: 800;
     line-height: 179px;
@@ -635,7 +635,7 @@ body {
     top: -12px;
     right: 48px;
 
-    font-family: "Gilroy", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 179px;
     font-weight: 800;
     line-height: 179px;
@@ -663,7 +663,7 @@ body {
     padding: 0;
     padding-right: 75px;
 
-    font-family: "Gilroy", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 36px;
     line-height: 48px;
     font-weight: 300;
@@ -786,7 +786,7 @@ body {
     padding-top: 193px;
     width: 160px;
 
-    font-family: "Gilroy", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
     font-weight: 800;
@@ -871,7 +871,7 @@ body {
 .advantages-list h3 {
     margin: 0;
 
-    font-family: "Gilroy", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 47px;
     line-height: 48px;
     font-weight: 800;
@@ -1085,7 +1085,7 @@ body {
     margin-bottom: 43px;
     margin-left: -2px;
 
-    font-family: "Gilroy", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 47px;
     line-height: 48px;
     letter-spacing: 0.47px;
@@ -1122,7 +1122,7 @@ body {
 
     list-style-type: circle;
 
-    font-family: "Gilroy", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 16px;
     line-height: 40px;
     font-weight: 800;
@@ -1250,7 +1250,7 @@ body {
     position: relative;
     width: 100%;
 
-    font-family: "Gilroy", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
     font-weight: 800;
@@ -1277,7 +1277,7 @@ body {
 }
 
 .title {
-    font-family: "Gilroy", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 800;
@@ -1340,6 +1340,10 @@ body {
     cursor: pointer;
 }
 
+.range-controls .toggle:active {
+    transform: scale(1.1);
+}
+
 .range-controls .toggle-min {
     left: -5px;
 }
@@ -1357,7 +1361,7 @@ body {
     display: inline-block;
     vertical-align: middle;
 
-    font-family: "Gilroy", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 14px;
     font-weight: 300;
     line-height: 24px;
@@ -1592,7 +1596,7 @@ body {
 }
 
 .item-name a { /*Название товара*/
-    font-family: "Gilroy", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     line-height: 10px;
     letter-spacing: 0.18px;
@@ -1709,7 +1713,7 @@ body {
     margin-top: 2px;
     text-align: right;
 
-    font-family: "Gilroy", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.16px;
@@ -1726,7 +1730,7 @@ body {
     margin-left: auto;
     width: 759px;
 
-    font-family: "Gilroy", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 16px;
     font-weight: 800;
     line-height: 24px;
@@ -1964,7 +1968,7 @@ body {
     padding: 0;
     margin-top: 21px;
 
-    font-family: "Gilroy", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
     font-weight: 800;
@@ -2122,7 +2126,7 @@ body {
 }
 
 .modal-feedback label {
-    font-family: "Gilroy", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     font-weight: 800;
     line-height: 24px;
@@ -2165,7 +2169,7 @@ body {
 .modal-feedback .input-email::-ms-input-placeholder,
 .modal-feedback .input-name::placeholder,
 .modal-feedback .input-email::placeholder {
-    font-family: "Open Sans", Arial, sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 18px;
     font-weight: 400;
